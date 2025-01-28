@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.156df562.css",
+    "main.js": "/static/js/main.2b3baa33.js",
+    "static/media/song.mp3": "/static/media/song.46bc884fa9573f2b4b1f.mp3",
+    "static/media/riya.png": "/static/media/riya.fda6b170cfb0ad0fa3e8.png",
+    "static/media/img13.jpeg": "/static/media/img13.7a3ae3ed8ab141f60e5b.jpeg",
+    "static/media/img11.jpeg": "/static/media/img11.2925d491102a43afd8ae.jpeg",
+    "static/media/img8.jpeg": "/static/media/img8.ae6b52491536fbd74b82.jpeg",
+    "static/media/img19.png": "/static/media/img19.78294a5937e4b1f9aff8.png",
+    "static/media/img12.jpeg": "/static/media/img12.8055c55cdb82e27b65d9.jpeg",
+    "static/media/3.jpeg": "/static/media/3.b76d78239c7a2faf3271.jpeg",
+    "static/media/img17.jpeg": "/static/media/img17.49753390726060a26965.jpeg",
+    "static/media/img20.jpeg": "/static/media/img20.605ef6c20ccd88e95048.jpeg",
+    "static/media/img10.jpeg": "/static/media/img10.be7cbbf5e3278771ae3f.jpeg",
+    "static/media/img14.jpeg": "/static/media/img14.ca2494d5fb4b59e49f77.jpeg",
+    "static/media/1.jpeg": "/static/media/1.1da265fa7d90d1655c2a.jpeg",
+    "static/media/img21.jpeg": "/static/media/img21.40af7d67d28e7636dd41.jpeg",
+    "static/media/5.jpeg": "/static/media/5.1bf7150794171d02112f.jpeg",
+    "static/media/img6.jpeg": "/static/media/img6.f94b26848872688e930e.jpeg",
+    "static/media/2.jpeg": "/static/media/2.d5fbdefffb379c812485.jpeg",
+    "static/media/img9.jpeg": "/static/media/img9.4c73ee1ff944d419dfbe.jpeg",
+    "static/media/img18.jpeg": "/static/media/img18.d6f60fbbfb009e068e06.jpeg",
+    "static/media/4.jpeg": "/static/media/4.93e2df2ec7e6aa368ef2.jpeg",
+    "static/media/img16.jpeg": "/static/media/img16.141f30837c68eee89c31.jpeg",
+    "static/media/img7.jpeg": "/static/media/img7.6fa6bff4871e84f35216.jpeg",
+    "static/media/img15.jpeg": "/static/media/img15.5f353e7f964ae549155e.jpeg",
+    "index.html": "/index.html",
+    "main.156df562.css.map": "/static/css/main.156df562.css.map",
+    "main.2b3baa33.js.map": "/static/js/main.2b3baa33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.156df562.css",
+    "static/js/main.2b3baa33.js"
+  ]
+}

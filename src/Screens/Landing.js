@@ -56,9 +56,9 @@ const Landing = () => {
                     <div className="buy-btn">Purchase</div>
                 </div>
                 <div className="link-shop">
-                    <img src="https://redtape.com/cdn/shop/products/8-800x800_22c88bd9-f9c2-4c61-ab55-71edce92bf57.jpg?v=1728477061" alt="" />
+                    <img src="https://www.eyewearlabs.com/cdn/shop/files/1_d98fa425-93a3-4127-8a0c-8d590aa46735.png?v=1715073649" alt="" />
                     <div className="tags">
-                        <div className="price">₹ 7999.99</div>
+                        <div className="price">₹ 1299.99</div>
                         <div className="tag">Best seller</div>
                     </div>
                     <div className="title">

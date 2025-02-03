@@ -15,7 +15,10 @@ const Landing = () => {
             <div className="about-header">Final Year computer science student @Jadavpur University</div>
             <div className="about-desc">Hello, I'm Atanu Nayak, a software developer from India. I had the opportunity to intern with Samsung R&D during the summer of 2024.</div>
 
-            <div className="follow-btn">Follow</div>
+            <div className="main-btns">
+                <div className="btn-1 trans glass">30K page views</div>
+                <div className="btn-1">Follow</div>
+            </div>
 
             <div className="group">
                 <div className="group-name-container">
@@ -30,45 +33,44 @@ const Landing = () => {
             <div className="group">
                 <div className="group-name-container">
                     <div className="group-name-container-line"></div>
-                    <div className="group-name">Socials</div>
+                    <div className="group-name">Connect with me</div>
                     <div className="group-name-container-line"></div>
                 </div>
+                <div className="link1">Email</div>
                 <div className="link1">Linkedin</div>
                 <div className="link1">Instragram</div>
-                <div className="link1">Facebook</div>
+                <div className="link1">Whatsapp</div>
             </div>
 
             <div className="group">
                 <div className="group-name-container">
                     <div className="group-name-container-line"></div>
-                    <div className="group-name">Shop</div>
+                    <div className="group-name">Current Playlist</div>
                     <div className="group-name-container-line"></div>
                 </div>
-                <div className="link-shop">
-                    <img src="https://redtape.com/cdn/shop/products/8-800x800_22c88bd9-f9c2-4c61-ab55-71edce92bf57.jpg?v=1728477061" alt="" />
-                    <div className="tags">
-                        <div className="price">₹ 7999.99</div>
-                        <div className="tag">Best seller</div>
-                    </div>
-                    <div className="title">
-                        RedTape Sneaker Casual Shoes For Men | Soft Cushion Insole, Slip-ResisTance, Dynamic Feet ...
-                    </div>
-                    <div className="buy-btn">Purchase</div>
+                <iframe src="https://open.spotify.com/embed/playlist/4LzYe8vJ0b38h2bh6iorgv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div className="group">
+                <div className="group-name-container">
+                    <div className="group-name-container-line"></div>
+                    <div className="group-name">Play with me</div>
+                    <div className="group-name-container-line"></div>
                 </div>
-                <div className="link-shop">
-                    <img src="https://www.eyewearlabs.com/cdn/shop/files/1_d98fa425-93a3-4127-8a0c-8d590aa46735.png?v=1715073649" alt="" />
-                    <div className="tags">
+                <div className="link-2">
+                    <img src="https://staticg.sportskeeda.com/editor/2023/03/112d7-16781866130065-1920.jpg" alt="" />
+                    {/* <div className="tags">
                         <div className="price">₹ 1299.99</div>
                         <div className="tag">Best seller</div>
-                    </div>
+                    </div> */}
                     <div className="title">
-                        RedTape Sneaker Casual Shoes For Men | Soft Cushion Insole, Slip-ResisTance, Dynamic Feet ...
+                        Join my clan (TH-10 n above)
                     </div>
-                    <div className="buy-btn">Purchase</div>
+                    <div className="buy-btn">Join</div>
                 </div>
             </div>
         </div>
-        <div className="join-us"></div>
+        {/* <div className="join-us"></div> */}
     </Container>
   )
 }
@@ -140,12 +142,46 @@ const Container = styled.div`
             text-align: center;
         }
 
-        .follow-btn{
-            font-size: 0.85rem;
+        .main-btns{
             margin-top: 30px;
-            padding: 10px 15px;
-            background-color: #363636;
-            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .btn-1{
+                font-size: 0.85rem;
+                padding: 10px 15px;
+                background-color: #363636;
+                border-radius: 10px;
+                margin: 0 5px;
+            }
+
+            .trans{
+                background-color: transparent;
+            }
+        }
+
+        .socials{
+            margin-top: 30px;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .social-icon{
+                height: 45px;
+                aspect-ratio: 1/1;
+                background-color: #363636;
+                border-radius: 50%;
+                margin: 2.5px;
+
+                padding: 2.5px;
+
+                img{
+                    width: 100%;
+                    border-radius: 100px;
+                }
+            }
         }
 
         .group{
@@ -189,7 +225,7 @@ const Container = styled.div`
                 height: 60px;
             }
 
-            .link-shop{
+            .link-2{
                 background-color: #f5f5f5;
                 
                 padding: 30px;
@@ -240,6 +276,7 @@ const Container = styled.div`
                     font-size: 0.85rem;
                     font-weight: 600;
                     margin-top: 10px;
+                    width: 100%;
                 }
 
                 .buy-btn{

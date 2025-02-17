@@ -1,16 +1,39 @@
 import React, { useState, useEffect, useRef } from "react";
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu';
+
+const fadeInFromLeft = keyframes`
+    from {
+        opacity: 1;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 0.35;
+        transform: translateX(0);
+    }
+`;
+
+const fadeInFromRight = keyframes`
+  from {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 0.35;
+    transform: translateX(0);
+  }
+`;
 
 const LandingPage = () => {
     const [offset, setOffset] = useState(0);
-    
+
     useEffect(() => {
         const handleScroll = () => setOffset(window.scrollY);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    
+
+
     return (
         <Container>
             <Navbar>
@@ -35,11 +58,11 @@ const LandingPage = () => {
             <FocusContent>
                 <div className="section-1">
                     <div className="section-1-main">
-                    <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-schedule.webp&w=640&q=75" alt="" style={{ top: '150px', left: '-40px' }} offset={offset * -1 * 0.1} />
-                    <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-engage.webp&w=640&q=75" alt="" style={{ top: '-15px' }} offset={offset * -1 * 0.2} />
-                    <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-add-images.webp&w=640&q=75" alt="" height="100px" style={{ top: '250px', right: '-40px' }} offset={offset * -1 * 0.15} />
-                    <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-analyze.webp&w=640&q=75" alt="" height="120px" style={{ bottom: '-20px', right: '-40px' }} offset={offset * -1 * 0.25} />
-                    <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-tag.webp&w=640&q=75" alt="" style={{ top: '350px', left: '-40px' }} offset={offset * -1 * 0.18} />
+                        <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-schedule.webp&w=640&q=75" alt="" style={{ top: '150px', left: '-40px' }} offset={offset * -1 * 0.1} />
+                        <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-engage.webp&w=640&q=75" alt="" style={{ top: '-15px' }} offset={offset * -1 * 0.2} direction="right" />
+                        <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-add-images.webp&w=640&q=75" alt="" height="100px" style={{ top: '250px', right: '-40px' }} offset={offset * -1 * 0.15} direction="right" />
+                        <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-analyze.webp&w=640&q=75" alt="" height="120px" style={{ bottom: '-20px', right: '-40px' }} offset={offset * -1 * 0.25} direction="right" />
+                        <Image src="https://buffer.com/_next/image?url=%2Fstatic%2Fimages%2Fhomepage%2Fhero-tag.webp&w=640&q=75" alt="" style={{ top: '350px', left: '-40px' }} offset={offset * -1 * 0.18} />
 
                         <h3>Your Bio, Your Story - Go Beyond the Bio</h3>
                         <div className="desc">Share more, connect deeper, and showcase your world — all set up in just 5 minutes!</div>
@@ -48,7 +71,20 @@ const LandingPage = () => {
                         <div className="desc desc-2">By entering your email, you agree to receive emails from us.</div>
                     </div>
                 </div>
-                <div className="section-2"></div>
+                <div className="section-2">
+                    <div className="metric">
+                        <div className="value">6,795</div>
+                        <div className="metric-name">Active users</div>
+                    </div>
+                    <div className="metric">
+                        <div className="value">58,881</div>
+                        <div className="metric-name">Posts published last month</div>
+                    </div>
+                    <div className="metric">
+                        <div className="value">182</div>
+                        <div className="metric-name">Active users</div>
+                    </div>
+                </div>
             </FocusContent>
         </Container>
     )
@@ -99,12 +135,14 @@ const Container = styled.div`
         border-radius: 50px;
         border: 1px solid black;
         font-weight: 300;
+        color: #333;
     }
 `
 
 const Navbar = styled.div`
     position: fixed;
     top: 0;
+    left: 0;
     height: 70px;
     width: 100vw;
     padding: 15px;
@@ -143,6 +181,7 @@ const FocusContent = styled.div`
         margin-top: 80px;
         overflow: hidden;
         height: 600px;
+        width: 100vw;
         padding: 20px;
         
         .section-1-main{
@@ -184,49 +223,15 @@ const FocusContent = styled.div`
 
                 color: hsl(180deg 4% 49.02%);
             }
-
-            .img{
-                height: 80px;
-                opacity: 0.35;
-                transform: translateY(${props => props.offset}px);
-                transition: transform 0.2s ease-out;
-            }
-
-            .img-1{
-                position: absolute;
-                top: 150px;
-                left: -40px;
-            }
-
-            .img-2{
-                position: absolute;
-                top: -15px;
-            }
-
-            .img-3{
-                position: absolute;
-                top: 250px;
-                right: -40px;
-                height: 100px;
-            }
-
-            .img-4{
-                position: absolute;
-                bottom: -20px;
-                right: -40px;
-                height: 120px;
-            }
-
-            .img-5{
-                position: absolute;
-                top: 350px;
-                left: -40px;
-            }
         }
     }  
     
     .section-2{
         height: 1000px;
+
+        .metric{
+
+        }
     }
 `
 
@@ -236,4 +241,5 @@ const Image = styled.img`
   height: ${props => props.height || '80px'};
   transform: translateY(${props => props.offset}px);
   transition: transform 0.2s ease-out;
+  animation: ${props => props.direction === 'right' ? fadeInFromRight : fadeInFromLeft} 1s ease-in-out;
 `;

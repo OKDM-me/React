@@ -6,12 +6,14 @@ import Landing from "./Screens/Landing";
 import UserArya from "./Screens/UserArya";
 import TemplateTesting from "./Screens/TemplateTesting";
 import LandingPage from "./Screens/LandingPage";
+import Dashboard from "./Screens/Dashboard";
 
 const App = () => {
   return (
     <Container>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/@mrungreat" element={<UserArya />} />
         <Route path="/mrungreat" element={<UserArya />} />
         <Route path="/@nayakpenguin" element={<Landing />} />

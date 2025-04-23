@@ -5,7 +5,7 @@ const GetAnswers1 = () => {
   return (
     <Container>
         <div className="main-content glass">
-            
+
         </div>
     </Container>
   )
@@ -48,5 +48,23 @@ const Container = styled.div`
         align-items: center;
 
         padding: 35px;
+    }
+
+    .glass {
+        background: rgba(255, 255, 255, 0.2); /* Transparent white */
+        border-radius: 16px; /* Rounded corners */
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        backdrop-filter: blur(10px); /* Background blur effect */
+        -webkit-backdrop-filter: blur(10px); /* For Safari support */
+        border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+    }
+
+    .join-us{
+        width: calc(100vw - 60px);
+        max-width: 450px;
+        background-color: whitesmoke;
+        border-radius: 30px;
+        height: 60px;
+        margin-top: 30px;
     }
 `

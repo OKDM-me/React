@@ -5,7 +5,10 @@ const GetAnswers1 = () => {
   return (
     <Container>
         <div className="main-content glass">
-
+            <div className="title">Views about my Instagram profile?</div>
+            <div className="desc">DroidFest 2025 is the flagship event that the Kotlin Kolkata User Group organized in proud collaboration with Google For Developers. This premier gathering brings together Android enthusiasts, developers.</div>
+            <textarea className="ans-input"></textarea>
+            
         </div>
     </Container>
   )
@@ -48,6 +51,26 @@ const Container = styled.div`
         align-items: center;
 
         padding: 35px;
+
+        .title{
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .desc{
+            margin-bottom: 10px;
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+
+        .ans-input{
+            width: 100%;
+            border-radius: 30px;
+            height: 500px;
+            outline: none;
+            background-color: #648be8;
+            border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+        }
     }
 
     .glass {

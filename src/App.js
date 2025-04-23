@@ -7,6 +7,7 @@ import UserArya from "./Screens/UserArya";
 import TemplateTesting from "./Screens/TemplateTesting";
 import LandingPage from "./Screens/LandingPage";
 import Dashboard from "./Screens/Dashboard";
+import GetAnswers1 from "./Screens/GetAnswers1";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/user/getvalues" element={<GetAnswers1 />} />
         <Route path="/@mrungreat" element={<UserArya />} />
         <Route path="/mrungreat" element={<UserArya />} />
         <Route path="/@nayakpenguin" element={<Landing />} />

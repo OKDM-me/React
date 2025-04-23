@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import LinkIcon from '@material-ui/icons/Link';
 import BuildIcon from '@material-ui/icons/Build';

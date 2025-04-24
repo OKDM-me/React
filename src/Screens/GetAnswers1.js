@@ -8,11 +8,16 @@ const GetAnswers1 = () => {
             <div className="title">Views about my Instagram profile?</div>
             <div className="desc">DroidFest 2025 is the flagship event that the Kotlin Kolkata User Group organized in proud collaboration with Google For Developers. This premier gathering brings together Android enthusiasts, developers.</div>
             <textarea className="ans-input" placeholder="write your message here ..."></textarea>
-            <div className="btn">Purchase</div>            
+            <div className="btn">Send Reply</div>            
         </div>
-        <div className="main-content glass my-u-20">
+        <div className="group-name-container">
+            <div className="group-name-container-line"></div>
+            <div className="group-name">All Replies</div>
+            <div className="group-name-container-line"></div>
+        </div>
+        <div className="main-content glass">
             <div className="desc">DroidFest 2025 is the flagship event that the Kotlin Kolkata User Group organized in proud collaboration with Google For Developers. This premier gathering brings together Android enthusiasts, developers.</div>
-            <div className="btn">Purchase</div>            
+            {/* <div className="btn">Purchase</div>             */}
         </div>
     </Container>
   )
@@ -94,8 +99,27 @@ const Container = styled.div`
         }
     }
 
-    .my-u-20{
-        margin-top: 20px;
+    .group-name-container{
+        margin: 30px 0;
+        padding: 0 35px;
+
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .group-name{
+            font-size: 0.85rem;
+            margin: 0 10px;
+        }
+
+        .group-name-container-line{
+            height: 3px;
+            border-radius: 100px;
+            background-color:rgb(213, 209, 209);
+            flex: 1;
+        }
     }
 
     .glass {

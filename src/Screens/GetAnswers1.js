@@ -7,8 +7,12 @@ const GetAnswers1 = () => {
         <div className="main-content glass">
             <div className="title">Views about my Instagram profile?</div>
             <div className="desc">DroidFest 2025 is the flagship event that the Kotlin Kolkata User Group organized in proud collaboration with Google For Developers. This premier gathering brings together Android enthusiasts, developers.</div>
-            <textarea className="ans-input"></textarea>
-            
+            <textarea className="ans-input" placeholder="write your message here ..."></textarea>
+            <div className="btn">Purchase</div>            
+        </div>
+        <div className="main-content glass my-u-20">
+            <div className="desc">DroidFest 2025 is the flagship event that the Kotlin Kolkata User Group organized in proud collaboration with Google For Developers. This premier gathering brings together Android enthusiasts, developers.</div>
+            <div className="btn">Purchase</div>            
         </div>
     </Container>
   )
@@ -43,34 +47,55 @@ const Container = styled.div`
         max-width: 450px;
         background-color: #3e3e3e;
         /* background: linear-gradient(135deg, #dfe9f3, #ffffff);  */
-        min-height: calc(100vh - 150px);
+        /* min-height: calc(100vh - 150px); */
         border-radius: 30px;
 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: flex-start;
 
         padding: 35px;
 
         .title{
             font-size: 1.25rem;
             margin-bottom: 10px;
+            
         }
 
         .desc{
             margin-bottom: 10px;
             font-weight: 300;
             font-size: 0.9rem;
+            color: #eae0e0;
         }
 
         .ans-input{
             width: 100%;
             border-radius: 30px;
-            height: 500px;
+            height: 300px;
             outline: none;
             background-color: #648be8;
             border: 1px solid rgba(255, 255, 255, 0.3); /* Light border for glass effect */
+            padding: 20px;
+            color: white;
         }
+
+        .btn{
+            margin-top: 10px;
+            background-color: yellowgreen;
+            font-size: 0.85rem;
+            color: #333;
+            font-weight: 600;
+            padding: 15px 15px;
+            width: 100%;
+            border-radius: 30px;
+            text-align: center;
+        }
+    }
+
+    .my-u-20{
+        margin-top: 20px;
     }
 
     .glass {

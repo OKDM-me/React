@@ -11,10 +11,12 @@ const VoteAnswer = () => {
         </div>
         <div className="vote-options">
             <div className="vote-option">
+                <div className="current-votes">52% Votes</div>
                 <div className="img-holder"><img src="https://akns-images.eonline.com/eol_images/Entire_Site/2025030/rs_1200x1200-250130080312-you2.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top" alt="" /></div>
-                <div className="name">Joe Goldberg - You Netflix Series</div>
-                <div className="current-votes">52%</div>
-                <div className="inc-vote"></div>
+                <div className="right">
+                    <div className="name">Joe Goldberg - You Netflix Series</div>
+                    <div className="vote-btn">Vote</div>
+                </div>
             </div>
         </div>
       </div>
@@ -77,24 +79,78 @@ const Container = styled.div`
         .vote-options{
             display: flex;
             flex-wrap: wrap;
+            margin-top: 20px;
             
             .vote-option{
-                width: calc(50% - 10px);
+                width: 100%;
                 padding: 10px;
                 background-color: white;
 
+                background-color: #f5f5f5;
+                font-weight: 500;
+                text-align: center;
+                border-radius: 30px;
+                color: #333;
+                margin-bottom: 10px;
+
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+
+                position: relative;
+
                 .img-holder{
                     position: relative;
-                    width: 100%;
+                    width: 70%;
                     aspect-ratio: 1/1;
                     overflow: hidden;
                     display: grid;
                     place-items: center;
-                    border-radius: 30px;
+                    border-radius: 1000px;
 
                     img{
                         width: 100%;
                         height: 100%;
+                    }
+                }
+
+                .current-votes{
+                    position: absolute;
+                    background-color: #d1d15c;
+                    border: 1.5px solid white;
+                    top: -10px;
+                    left: -10px;
+                    border-radius: 30px;
+                    z-index: 10;
+                    
+                    height: 30px;
+                    padding: 0 10px;
+                    color: #333;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 0.65rem;
+                }
+
+                .right{
+                    padding: 10px;
+                    .name{
+                        text-align: left;
+                        color: #333;
+                        font-size: 0.85rem;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+
+                    .vote-btn{
+                        background-color: yellowgreen;
+                        font-size: 0.85rem;
+                        color: #333;
+                        font-weight: 600;
+                        padding: 15px 15px;
+                        width: 100%;
+                        border-radius: 30px;
+                        text-align: center;
                     }
                 }
             }

@@ -6,6 +6,7 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import BarChartIcon from '@material-ui/icons/BarChart';
 
 
 const Landing = () => {
@@ -59,14 +60,37 @@ const Landing = () => {
                     <div className="btn-1">Follow</div>
                 </div>
 
+                <div className="socials">
+                    <div className="social-icon">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png" alt="" />
+                    </div>
+                    <div className="social-icon">
+                        <img src="https://www.svgrepo.com/show/416500/youtube-circle-logo.svg" alt="" />
+                    </div>
+                    <div className="social-icon">
+                        <img src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338508_1280.png" alt="" />
+                    </div>
+                </div>
+
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
                         <div className="group-name">Reply Ananously</div>
                         <div className="group-name-container-line"></div>
                     </div>
-                    <div className="link1">Views about my Insta?</div>
-                    <div className="link1">Heard something about me?</div>
+                    
+                    <div className="link1">
+                        Views about my Insta?
+                        <div className="link-circle">
+                            <ChevronRightIcon/>
+                        </div>
+                    </div>
+                    <div className="link1">
+                        Heard something about me?
+                        <div className="link-circle">
+                            <ChevronRightIcon/>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="group">
@@ -75,10 +99,36 @@ const Landing = () => {
                         <div className="group-name">Important Links</div>
                         <div className="group-name-container-line"></div>
                     </div>
-                    <div className="link1">My professional side</div>
-                    <div className="link1">Date me?</div>
-                    <div className="link1">Anime Tracker List</div>
-                    <div className="link1">Public Bucket List</div>
+                    <div className="link1">
+                        My professional side
+                        <div className="link-circle">
+                            <CallMadeIcon/>
+                        </div>
+                    </div>
+                    <div className="link1">
+                        Date me?
+                        <div className="link-circle">
+                            <CallMadeIcon/>
+                        </div>
+                    </div>
+                    <div className="link1">
+                        Anime Tracker List
+                        <div className="link-circle">
+                            <ChevronRightIcon/>
+                        </div>
+                    </div>
+                    <div className="link1">
+                        Public Bucket List
+                        <div className="link-circle">
+                            <ChevronRightIcon/>
+                        </div>
+                    </div>
+                    <div className="link1">
+                        Movie Personality I resonate the most
+                        <div className="link-circle">
+                            <BarChartIcon/>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="group">
@@ -145,11 +195,11 @@ const Landing = () => {
                     <div className="link-2">
                         <div className="img-btn-holder">
                             <div className="hold-sq-image">
-                                <img src={img}/>
+                                <img src={img} />
                             </div>
                             <div className="image-btns">
-                                <button onClick={handleLeft}><ChevronLeftIcon/></button>
-                                <button onClick={handleRight}><ChevronRightIcon/></button>
+                                <button onClick={handleLeft}><ChevronLeftIcon /></button>
+                                <button onClick={handleRight}><ChevronRightIcon /></button>
                             </div>
                         </div>
                         <div className="title">{title}</div>
@@ -256,7 +306,7 @@ const Container = styled.div`
             flex-wrap: wrap;
 
             .social-icon{
-                height: 45px;
+                height: 35px;
                 aspect-ratio: 1/1;
                 background-color: #363636;
                 border-radius: 50%;
@@ -312,6 +362,28 @@ const Container = styled.div`
                 justify-content: center;
 
                 height: 60px;
+
+                position: relative;
+
+                .link-circle{
+                    position: absolute;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+
+                    background-color: #d9dfef;
+
+                    right: -10px;
+
+                    display: grid;
+                    place-items: center;
+
+                    svg{
+                        font-size: 1rem;
+                        fill: #333;
+                    }
+                }
+
             }
 
             .link-2{

@@ -1,29 +1,53 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled from 'styled-components'
+import React, { useState } from "react";
+import styled from "styled-components";
 
-const GetAnswers1 = () => {
+const GetAnswers = () => {
+  const [replies, setReplies] = useState([]);
+  const [input, setInput] = useState("");
+
+  const handleReply = () => {
+    if (input.trim() !== "") {
+      setReplies([input, ...replies]);
+      setInput("");
+    }
+  };
+
   return (
     <Container>
-        <div className="main-content glass">
-            <div className="title">Views about my Instagram profile?</div>
-            <div className="desc">DroidFest 2025 is the flagship event that the Kotlin Kolkata User Group organized in proud collaboration with Google For Developers. This premier gathering brings together Android enthusiasts, developers.</div>
-            <textarea className="ans-input" placeholder="write your message here ..."></textarea>
-            <div className="btn">Send Reply</div>            
+      <div className="main-content glass">
+        <div className="title">What are your honest thoughts on my Instagram profile?</div>
+        <div className="desc">
+          I'm trying to improve my personal brand. Feel free to give feedback on the vibe, content, or overall look. Be honest!
         </div>
-        <div className="group-name-container">
-            <div className="group-name-container-line"></div>
-            <div className="group-name">All Replies</div>
-            <div className="group-name-container-line"></div>
-        </div>
-        <div className="main-content glass">
-            <div className="desc">DroidFest 2025 is the flagship event that the Kotlin Kolkata User Group organized in proud collaboration with Google For Developers. This premier gathering brings together Android enthusiasts, developers.</div>
-            {/* <div className="btn">Purchase</div>             */}
-        </div>
-    </Container>
-  )
-}
+        <textarea
+          className="ans-input"
+          placeholder="Write your anonymous reply here..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <div className="btn" onClick={handleReply}>Send Reply</div>
+      </div>
 
-export default GetAnswers1
+      {replies.length > 0 && (
+        <>
+          <div className="group-name-container">
+            <div className="group-name-container-line" />
+            <div className="group-name">All Replies</div>
+            <div className="group-name-container-line" />
+          </div>
+
+          {replies.map((reply, index) => (
+            <div className="main-content glass" key={index}>
+              <div className="desc">{reply}</div>
+            </div>
+          ))}
+        </>
+      )}
+    </Container>
+  );
+};
+
+export default GetAnswers;
 
 const Container = styled.div`
     width: 100vw;

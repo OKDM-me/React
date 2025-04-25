@@ -4,7 +4,46 @@ import CallMadeIcon from '@material-ui/icons/CallMade';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+
+
 const Landing = () => {
+    const albumData = [
+        {
+            img: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Samsung_headquarters.jpg",
+            title: "Samsung Town",
+            date: "13 - 02 - 2022"
+        },
+        {
+            img: "https://img.staticmb.com/mbcontent/images/crop/uploads/2022/10/South-City-Mall-Kolkata-View-from-the-Top-Floor_0_1200.jpg",
+            title: "South City Mall",
+            date: "21 - 06 - 2023"
+        },
+        {
+            img: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jadavpur_University_Gate_No._4.jpg",
+            title: "My first day in my college",
+            date: "28 - 10 - 2021"
+        },
+        {
+            img: "https://i.ytimg.com/vi/cIxPS-B01Lg/maxresdefault.jpg",
+            title: "Bagmane Tech Park",
+            date: "07 - 03 - 2023"
+        }
+    ];
+
+    const [index, setIndex] = useState(0);
+
+    const handleLeft = () => {
+        setIndex((prevIndex) => (prevIndex - 1 + albumData.length) % albumData.length);
+    };
+
+    const handleRight = () => {
+        setIndex((prevIndex) => (prevIndex + 1) % albumData.length);
+    };
+
+    const { img, title, date } = albumData[index];
+
     return (
         <Container>
             <div className="main-content glass">
@@ -45,6 +84,29 @@ const Landing = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
+                        <div className="group-name">🎬 Movie Reviews</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <div className="link-2">
+                        <img
+                            src="https://m.media-amazon.com/images/S/pv-target-images/c7fc75a423fc33698265a27fe446a41026f3c8642fd6c8706c43b897d2ffb3e6.jpg"
+                            alt="Movie Thumbnail"
+                        />
+                        <div className="title">
+                            My Personal Takes on Cinema 🍿
+                        </div>
+                        <div className="desc">
+                            Honest, chaotic, sometimes deep reviews of movies I watch—ranging from cinematic masterpieces to “I can’t believe I sat through that.”
+                        </div>
+                        <div className="buy-btn" style={{ marginTop: '10px' }}>
+                            Read My Reviews
+                        </div>
+                    </div>
+                </div>
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
                         <div className="group-name">Current Playlist</div>
                         <div className="group-name-container-line"></div>
                     </div>
@@ -77,19 +139,21 @@ const Landing = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">Play with me</div>
+                        <div className="group-name">My Public Album</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link-2">
-                        <img src="https://staticg.sportskeeda.com/editor/2023/03/112d7-16781866130065-1920.jpg" alt="" />
-                        {/* <div className="tags">
-                        <div className="price">₹ 1299.99</div>
-                        <div className="tag">Best seller</div>
-                    </div> */}
-                        <div className="title">
-                            Join my clan (TH-10 n above)
+                        <div className="img-btn-holder">
+                            <div className="hold-sq-image">
+                                <img src={img}/>
+                            </div>
+                            <div className="image-btns">
+                                <button onClick={handleLeft}><ChevronLeftIcon/></button>
+                                <button onClick={handleRight}><ChevronRightIcon/></button>
+                            </div>
                         </div>
-                        <div className="buy-btn">Join</div>
+                        <div className="title">{title}</div>
+                        <div className="date">{date}</div>
                     </div>
                 </div>
             </div>
@@ -221,9 +285,11 @@ const Container = styled.div`
                 .group-name{
                     font-size: 0.85rem;
                     margin: 0 10px;
+                    text-align: center;
                 }
 
                 .group-name-container-line{
+                    min-width: 20px;
                     height: 3px;
                     border-radius: 100px;
                     background-color: #676363;
@@ -266,6 +332,51 @@ const Container = styled.div`
                     border-radius: 30px;
                 }
 
+                .img-btn-holder{
+                    position: relative;
+                    height: auto;
+                    
+                    .hold-sq-image{
+                        position: relative;
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        overflow: hidden;
+                        display: grid;
+                        place-items: center;
+                        border-radius: 30px;
+    
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+
+                .image-btns{
+                    position: absolute;
+                    width: calc(100% + 30px);
+                    display: flex;
+                    justify-content: space-between;
+                    top: calc(50% - 15px);
+                    margin-left: -15px;
+                    border-radius: 100px;
+
+                    button{
+                        height: 30px;
+                        width: 30px;
+                        border-radius: 100px;
+                        border: 1px solid #e5e5e5;
+                        background-color: white;
+                        display: grid;
+                        place-items: center;
+
+                        svg{
+                            fill: #333;
+                        }
+                    }
+                }
+
                 .tags{
                     margin-top: 10px;
                     width: 100%;
@@ -305,6 +416,14 @@ const Container = styled.div`
                 .desc{
                     color: #333;
                     font-size: 0.75rem;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                .date{
+                    color: #333;
+                    font-size: 0.65rem;
                     font-weight: 300;
                     margin-top: 10px;
                     width: 100%;

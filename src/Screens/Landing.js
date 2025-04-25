@@ -6,73 +6,96 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 
 const Landing = () => {
     return (
-    <Container>
-        <div className="main-content glass">
-            <div className="logo-x-dp">
-                <img src="https://media.licdn.com/dms/image/v2/D5603AQHc7m2ahjLvsQ/profile-displayphoto-shrink_800_800/B56ZSi9EoCHEAc-/0/1737900706914?e=1743638400&v=beta&t=ts0xpBGygsHZo2VS_B2v3vASU6izmlJ01yu3_wIQZv4" alt="" />
-            </div>
-            <div className="name">Atanu Nayak</div>
-            <div className="about-header">Final Year computer science student @Jadavpur University</div>
-            <div className="about-desc">Hello, I'm Atanu Nayak, a software developer from India. I had the opportunity to intern with Samsung R&D during the summer of 2024.</div>
-
-            <div className="main-btns">
-                <div className="btn-1 trans glass">30K page views</div>
-                <div className="btn-1">Follow</div>
-            </div>
-
-            <div className="group">
-                <div className="group-name-container">
-                    <div className="group-name-container-line"></div>
-                    <div className="group-name">Ask Ananously</div>
-                    <div className="group-name-container-line"></div>
+        <Container>
+            <div className="main-content glass">
+                <div className="logo-x-dp">
+                    <img src="https://media.licdn.com/dms/image/v2/D5603AQHc7m2ahjLvsQ/profile-displayphoto-shrink_800_800/B56ZSi9EoCHEAc-/0/1737900706914?e=1750896000&v=beta&t=ab27itTFMv-ZoLl8S4FDYUgwOXNm92Son6GxrYmoCp4" alt="" />
                 </div>
-                <div className="link1">Views about my Instagram profile?</div>
-                <div className="link1">Confess something</div>
-            </div>
+                <div className="name">Atanu Nayak</div>
+                <div className="about-header">Final Year computer science student @Jadavpur University</div>
+                <div className="about-desc">Hello, I'm Atanu Nayak, a software developer from India. I had the opportunity to intern with Samsung R&D during the summer of 2024.</div>
 
-            <div className="group">
-                <div className="group-name-container">
-                    <div className="group-name-container-line"></div>
-                    <div className="group-name">Connect with me</div>
-                    <div className="group-name-container-line"></div>
+                <div className="main-btns">
+                    <div className="btn-1 trans glass">30K page views</div>
+                    <div className="btn-1">Follow</div>
                 </div>
-                <div className="link1">Email</div>
-                <div className="link1">Linkedin</div>
-                <div className="link1">Instragram</div>
-                <div className="link1">Whatsapp</div>
-            </div>
 
-            <div className="group">
-                <div className="group-name-container">
-                    <div className="group-name-container-line"></div>
-                    <div className="group-name">Current Playlist</div>
-                    <div className="group-name-container-line"></div>
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Reply Ananously</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <div className="link1">Views about my Insta?</div>
+                    <div className="link1">Heard something about me?</div>
                 </div>
-                <iframe src="https://open.spotify.com/embed/playlist/4LzYe8vJ0b38h2bh6iorgv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
 
-            <div className="group">
-                <div className="group-name-container">
-                    <div className="group-name-container-line"></div>
-                    <div className="group-name">Play with me</div>
-                    <div className="group-name-container-line"></div>
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Important Links</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <div className="link1">My professional side</div>
+                    <div className="link1">Date me?</div>
+                    <div className="link1">Anime Tracker List</div>
+                    <div className="link1">Public Bucket List</div>
                 </div>
-                <div className="link-2">
-                    <img src="https://staticg.sportskeeda.com/editor/2023/03/112d7-16781866130065-1920.jpg" alt="" />
-                    {/* <div className="tags">
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Current Playlist</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <iframe src="https://open.spotify.com/embed/playlist/4LzYe8vJ0b38h2bh6iorgv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">I Support</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+
+                    <div className="link-2 glass">
+                        <img
+                            src="https://algolisted.com/static/media/gpayScan.b55a840d78287927c6ee.jpeg"
+                            alt="Donate QR"
+                            className="qr-image"
+                        />
+                        <div className="title">Helping Stray Dogs in Mumbai 🐾</div>
+                        <div className="desc">
+                            I support PawPal India, an NGO working towards rescuing, feeding, and rehoming stray dogs.
+                            Every bit of help counts. If you resonate with the cause, feel free to donate using the QR below.
+                        </div>
+                        <div className="buy-btn">Donate</div>
+                    </div>
+                </div>
+
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Play with me</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <div className="link-2">
+                        <img src="https://staticg.sportskeeda.com/editor/2023/03/112d7-16781866130065-1920.jpg" alt="" />
+                        {/* <div className="tags">
                         <div className="price">₹ 1299.99</div>
                         <div className="tag">Best seller</div>
                     </div> */}
-                    <div className="title">
-                        Join my clan (TH-10 n above)
+                        <div className="title">
+                            Join my clan (TH-10 n above)
+                        </div>
+                        <div className="buy-btn">Join</div>
                     </div>
-                    <div className="buy-btn">Join</div>
                 </div>
             </div>
-        </div>
-        {/* <div className="join-us"></div> */}
-    </Container>
-  )
+            {/* <div className="join-us"></div> */}
+        </Container>
+    )
 }
 
 export default Landing
@@ -210,7 +233,7 @@ const Container = styled.div`
 
             .link1{
                 background-color: #f5f5f5;
-                font-size: 0.85rem;
+                font-size: 0.75rem;
                 font-weight: 500;
                 text-align: center;
                 padding: 15px 30px;
@@ -275,6 +298,14 @@ const Container = styled.div`
                     color: #333;
                     font-size: 0.85rem;
                     font-weight: 600;
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                .desc{
+                    color: #333;
+                    font-size: 0.75rem;
+                    font-weight: 300;
                     margin-top: 10px;
                     width: 100%;
                 }

@@ -13,23 +13,28 @@ const Landing = () => {
     const albumData = [
         {
             img: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Samsung_headquarters.jpg",
-            title: "Samsung Town",
-            date: "13 - 02 - 2022"
+            title: "My workspace at Samsung Town – where the magic began ✨",
+            date: "13 February, 2022"
         },
         {
             img: "https://img.staticmb.com/mbcontent/images/crop/uploads/2022/10/South-City-Mall-Kolkata-View-from-the-Top-Floor_0_1200.jpg",
-            title: "South City Mall",
-            date: "21 - 06 - 2023"
+            title: "Chilling at South City Mall – the weekend ritual 🛍️🍕",
+            date: "21 June, 2023"
         },
         {
             img: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jadavpur_University_Gate_No._4.jpg",
-            title: "My first day in my college",
-            date: "28 - 10 - 2021"
+            title: "Throwback to my first day at Jadavpur University – butterflies and big dreams 🎓💭",
+            date: "28 October, 2021"
         },
         {
             img: "https://i.ytimg.com/vi/cIxPS-B01Lg/maxresdefault.jpg",
-            title: "Bagmane Tech Park",
-            date: "07 - 03 - 2023"
+            title: "Evening walks at Bagmane Tech Park – coding and calm vibes 🌇💻",
+            date: "07 March, 2023"
+        },
+        {
+            img: "https://media.istockphoto.com/id/184316397/photo/london-corporate-buildings.jpg?s=612x612&w=0&k=20&c=yLP6jM6vY8IEOnypm3NH7WE8Wr2u-mvtdao99rB1Ez4=",
+            title: "Captured the golden hour from my hostel terrace – peace before deadlines 🌆📷",
+            date: "04 September, 2022"
         }
     ];
 
@@ -202,7 +207,7 @@ const Landing = () => {
                                 <button onClick={handleRight}><ChevronRightIcon /></button>
                             </div>
                         </div>
-                        <div className="title">{title}</div>
+                        <div className="desc">{title}</div>
                         <div className="date">{date}</div>
                     </div>
                 </div>
@@ -499,6 +504,7 @@ const Container = styled.div`
                     font-weight: 300;
                     margin-top: 10px;
                     width: 100%;
+                    font-weight: 500;
                 }
 
                 .buy-btn{

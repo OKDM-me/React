@@ -80,7 +80,7 @@ const Landing = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">Reply Ananously</div>
+                        <div className="group-name">Reply Anonymously</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     

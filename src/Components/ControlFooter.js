@@ -50,6 +50,7 @@ const ControlFooter = () => {
 export default ControlFooter
 
 const Container = styled.div`
+    background-color: #000;
     position: fixed;
     bottom: 0;
     left: 0;

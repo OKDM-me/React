@@ -226,7 +226,7 @@ const UserProfile = () => {
                     </div>
                 </div>
             </div>
-
+            
             <ControlFooter />
         </Container>
     )
@@ -458,13 +458,14 @@ const Container = styled.div`
                         overflow: hidden;
                         display: grid;
                         place-items: center;
-                        /* border-radius: 30px; */
-                        border-radius: 5px;
+                        border-radius: 30px;
+                        /* border-radius: 5px; */
     
                         img{
                             width: 100%;
                             height: 100%;
-                            border-radius: 5px;
+                            /* border-radius: 5px; */
+                            /* border-radius: 0px; */
                         }
                     }
                 }

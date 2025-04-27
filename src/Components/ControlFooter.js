@@ -5,6 +5,7 @@ import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
 import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutlined';
+import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 
 const ControlFooter = () => {
     return (
@@ -33,7 +34,7 @@ const ControlFooter = () => {
                         <NotificationsNoneOutlinedIcon/>
                     </a>
                     <a href="/">
-                        <BookmarkBorderOutlinedIcon/>
+                        <EditOutlinedIcon/>
                     </a>
                     <a href="/">
                         <ShoppingCartOutlinedIcon/>

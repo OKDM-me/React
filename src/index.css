@@ -16,7 +16,7 @@ input, textarea, select { font-family: 'Poppins', sans-serif; }
 body{
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #000;;
   overflow-x: hidden; /* Hide horizontal scrollbar */
   font-family: 'Poppins', sans-serif;
 }

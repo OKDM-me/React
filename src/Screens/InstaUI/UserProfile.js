@@ -14,6 +14,46 @@ import RoomIcon from '@material-ui/icons/Room';
 import sampleDp from "../../Images/sampledp.png"
 
 const UserProfile = () => {
+    const albumData = [
+        {
+            img: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Samsung_headquarters.jpg",
+            title: "My workspace at Samsung Town – where the magic began ✨",
+            date: "13 February, 2022"
+        },
+        {
+            img: "https://img.staticmb.com/mbcontent/images/crop/uploads/2022/10/South-City-Mall-Kolkata-View-from-the-Top-Floor_0_1200.jpg",
+            title: "Chilling at South City Mall – the weekend ritual 🛍️🍕",
+            date: "21 June, 2023"
+        },
+        {
+            img: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jadavpur_University_Gate_No._4.jpg",
+            title: "Throwback to my first day at Jadavpur University – butterflies and big dreams 🎓💭",
+            date: "28 October, 2021"
+        },
+        {
+            img: "https://i.ytimg.com/vi/cIxPS-B01Lg/maxresdefault.jpg",
+            title: "Evening walks at Bagmane Tech Park – coding and calm vibes 🌇💻",
+            date: "07 March, 2023"
+        },
+        {
+            img: "https://media.istockphoto.com/id/184316397/photo/london-corporate-buildings.jpg?s=612x612&w=0&k=20&c=yLP6jM6vY8IEOnypm3NH7WE8Wr2u-mvtdao99rB1Ez4=",
+            title: "Captured the golden hour from my hostel terrace – peace before deadlines 🌆📷",
+            date: "04 September, 2022"
+        }
+    ];
+
+    const [index, setIndex] = useState(0);
+
+    const handleLeft = () => {
+        setIndex((prevIndex) => (prevIndex - 1 + albumData.length) % albumData.length);
+    };
+
+    const handleRight = () => {
+        setIndex((prevIndex) => (prevIndex + 1) % albumData.length);
+    };
+
+    const { img, title, date } = albumData[index];
+
     return (
         <Container>
             <div className="main-content">
@@ -66,74 +106,125 @@ const UserProfile = () => {
                 </div>
 
                 <div className="group">
-                        <div className="group-name-container">
-                            <div className="group-name-container-line"></div>
-                            <div className="group-name">Important Links</div>
-                            <div className="group-name-container-line"></div>
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Important Links</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <div className="link1">
+                        My professional side
+                        <div className="link-circle">
+                            <CallMadeIcon />
                         </div>
-                        <div className="link1">
-                            My professional side
-                            <div className="link-circle">
-                                <CallMadeIcon/>
-                            </div>
+                    </div>
+                    <div className="link1">
+                        Date me?
+                        <div className="link-circle">
+                            <CallMadeIcon />
                         </div>
-                        <div className="link1">
-                            Date me?
-                            <div className="link-circle">
-                                <CallMadeIcon/>
-                            </div>
+                    </div>
+                    <div className="link1">
+                        Anime Tracker List
+                        <div className="link-circle">
+                            <ChevronRightIcon />
                         </div>
-                        <div className="link1">
-                            Anime Tracker List
-                            <div className="link-circle">
-                                <ChevronRightIcon/>
-                            </div>
+                    </div>
+                    <div className="link1">
+                        Public Bucket List
+                        <div className="link-circle">
+                            <ChevronRightIcon />
                         </div>
-                        <div className="link1">
-                            Public Bucket List
-                            <div className="link-circle">
-                                <ChevronRightIcon/>
-                            </div>
+                    </div>
+                    <div className="link1">
+                        Movie Personality I resonate the most
+                        <div className="link-circle">
+                            <BarChartIcon />
                         </div>
-                        <div className="link1">
-                            Movie Personality I resonate the most
-                            <div className="link-circle">
-                                <BarChartIcon/>
-                            </div>
+                    </div>
+                    <div className="link1">
+                        My music taste
+                        <div className="link-circle">
+                            <CallMadeIcon />
                         </div>
+                    </div>
+                </div>
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">🎬 Movie Reviews</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <div className="link-2">
+                        <img
+                            src="https://m.media-amazon.com/images/S/pv-target-images/c7fc75a423fc33698265a27fe446a41026f3c8642fd6c8706c43b897d2ffb3e6.jpg"
+                            alt="Movie Thumbnail"
+                        />
+                        <div className="title">
+                            My Personal Takes on Cinema 🍿
+                        </div>
+                        <div className="desc">
+                            Honest, chaotic, sometimes deep reviews of movies I watch—ranging from cinematic masterpieces to “I can’t believe I sat through that.”
+                        </div>
+                        <div className="buy-btn">
+                            Read My Reviews
+                        </div>
+                    </div>
+                </div>
+
+                {/* <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Current Playlist</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <iframe src="https://open.spotify.com/embed/playlist/4LzYe8vJ0b38h2bh6iorgv?utm_source=generator" theme='black' width="100%" height="452" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style={{
+                        borderRadius: "30px",
+                    }}></iframe>
+                </div> */}
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">I Support</div>
+                        <div className="group-name-container-line"></div>
                     </div>
 
-                    <div className="group">
-                        <div className="group-name-container">
-                            <div className="group-name-container-line"></div>
-                            <div className="group-name">🎬 Movie Reviews</div>
-                            <div className="group-name-container-line"></div>
+                    <div className="link-2 glass">
+                        <img
+                            src="https://algolisted.com/static/media/gpayScan.b55a840d78287927c6ee.jpeg"
+                            alt="Donate QR"
+                            className="qr-image"
+                        />
+                        <div className="title">Helping Stray Dogs in Mumbai 🐾</div>
+                        <div className="desc">
+                            I support PawPal India, an NGO working towards rescuing, feeding, and rehoming stray dogs.
+                            Every bit of help counts. If you resonate with the cause, feel free to donate using the QR below.
                         </div>
-                        <div className="link-2">
-                            <img
-                                src="https://m.media-amazon.com/images/S/pv-target-images/c7fc75a423fc33698265a27fe446a41026f3c8642fd6c8706c43b897d2ffb3e6.jpg"
-                                alt="Movie Thumbnail"
-                            />
-                            <div className="title">
-                                My Personal Takes on Cinema 🍿
-                            </div>
-                            <div className="desc">
-                                Honest, chaotic, sometimes deep reviews of movies I watch—ranging from cinematic masterpieces to “I can’t believe I sat through that.”
-                            </div>
-                            <div className="buy-btn">
-                                Read My Reviews
-                            </div>
-                        </div>
+                        <div className="buy-btn">Donate</div>
                     </div>
+                </div>
 
-                    <div className="group">
-                        <div className="group-name-container">
-                            <div className="group-name-container-line"></div>
-                            <div className="group-name">Current Playlist</div>
-                            <div className="group-name-container-line"></div>
-                        </div>
-                        <iframe src="https://open.spotify.com/embed/playlist/4LzYe8vJ0b38h2bh6iorgv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">My Public Album</div>
+                        <div className="group-name-container-line"></div>
                     </div>
+                    <div className="link-2">
+                        <div className="img-btn-holder">
+                            <div className="hold-sq-image">
+                                <img src={img} />
+                            </div>
+                            <div className="image-btns">
+                                <button onClick={handleLeft}><ChevronLeftIcon /></button>
+                                <button onClick={handleRight}><ChevronRightIcon /></button>
+                            </div>
+                        </div>
+                        <div className="desc">{title}</div>
+                        <div className="date">{date}</div>
+                    </div>
+                </div>
             </div>
 
             <ControlFooter />
@@ -349,6 +440,11 @@ const Container = styled.div`
                 img{
                     width: 100%;
                     border-radius: 30px;
+                    margin-bottom: 10px;
+                }
+
+                .qr-image{
+                    border-radius: 5px;
                 }
 
                 .img-btn-holder{
@@ -362,11 +458,13 @@ const Container = styled.div`
                         overflow: hidden;
                         display: grid;
                         place-items: center;
-                        border-radius: 30px;
+                        /* border-radius: 30px; */
+                        border-radius: 5px;
     
                         img{
                             width: 100%;
                             height: 100%;
+                            border-radius: 5px;
                         }
                     }
                 }

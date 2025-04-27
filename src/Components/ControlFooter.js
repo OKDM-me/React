@@ -52,6 +52,7 @@ export default ControlFooter
 const Container = styled.div`
     position: fixed;
     bottom: 0;
+    left: 0;
 
     width: 100vw;
     height: 64px;

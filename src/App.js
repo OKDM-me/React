@@ -9,6 +9,7 @@ import LandingPage from "./Screens/LandingPage";
 import Dashboard from "./Screens/Dashboard";
 import GetAnswers1 from "./Screens/GetAnswers1";
 import VoteAnswer from "./Screens/VoteAnswer";
+import MyReviews from "./Screens/MyReviews";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/my-reviews" element={<MyReviews />} />
         <Route path="/user/getvalues" element={<GetAnswers1 />} />
         <Route path="/user/getvaluespoll" element={<VoteAnswer />} />
         <Route path="/@mrungreat" element={<UserArya />} />

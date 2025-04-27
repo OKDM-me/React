@@ -10,12 +10,14 @@ import Dashboard from "./Screens/Dashboard";
 import GetAnswers1 from "./Screens/GetAnswers1";
 import VoteAnswer from "./Screens/VoteAnswer";
 import MyReviews from "./Screens/MyReviews";
+import UserProfile from "./Screens/InstaUI/UserProfile";
 
 const App = () => {
   return (
     <Container>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/" element={<LandingPage />} /> */}
+        <Route path="/" element={<UserProfile />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/my-reviews" element={<MyReviews />} />
         <Route path="/user/getvalues" element={<GetAnswers1 />} />

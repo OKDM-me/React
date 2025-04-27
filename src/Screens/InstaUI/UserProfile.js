@@ -16,52 +16,124 @@ import sampleDp from "../../Images/sampledp.png"
 const UserProfile = () => {
     return (
         <Container>
-            <div className="user-data">
-                <div className="logo-x-dp">
-                    <img src={sampleDp} alt="" />
-                </div>
-                <div className="name">Atanu Nayak</div>
-                <div className="about-header">Final Year computer science student <br /> @Jadavpur University</div>
-                <div className="about-desc">I don't have an original personality I stole it from Shri Krishna 🦚🪈</div>
-                <div className="about-location"><RoomIcon /> Kolkata, India</div>
-
-                <div className="main-btns">
-                    <div className="btn-1 trans">30K page views</div>
-                    <div className="btn-1">Save page</div>
-                </div>
-
-                <div className="socials">
-                    <div className="social-icon">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png" alt="" />
+            <div className="main-content">
+                <div className="user-data">
+                    <div className="logo-x-dp">
+                        <img src={sampleDp} alt="" />
                     </div>
-                    <div className="social-icon">
-                        <img src="https://www.svgrepo.com/show/416500/youtube-circle-logo.svg" alt="" />
-                    </div>
-                    <div className="social-icon">
-                        <img src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338508_1280.png" alt="" />
-                    </div>
-                </div>
-            </div>
+                    <div className="name">Atanu Nayak</div>
+                    <div className="about-header">Final Year computer science student <br /> @Jadavpur University</div>
+                    <div className="about-desc">I don't have an original personality I stole it from Shri Krishna 🦚🪈</div>
+                    <div className="about-location"><RoomIcon /> Kolkata, India</div>
 
-            <div className="group">
-                <div className="group-name-container">
-                    <div className="group-name-container-line"></div>
-                    <div className="group-name">Reply Anonymously</div>
-                    <div className="group-name-container-line"></div>
+                    <div className="main-btns">
+                        <div className="btn-1 trans">30K page views</div>
+                        <div className="btn-1">Subscribe</div>
+                    </div>
+
+                    <div className="socials">
+                        <div className="social-icon">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png" alt="" />
+                        </div>
+                        <div className="social-icon">
+                            <img src="https://www.svgrepo.com/show/416500/youtube-circle-logo.svg" alt="" />
+                        </div>
+                        <div className="social-icon">
+                            <img src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338508_1280.png" alt="" />
+                        </div>
+                    </div>
                 </div>
 
-                <div className="link1">
-                    Views about my Insta?
-                    <div className="link-circle">
-                        <ChevronRightIcon />
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Reply Anonymously</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+
+                    <div className="link1">
+                        Views about my Insta?
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+                    <div className="link1">
+                        Heard something about me?
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
                     </div>
                 </div>
-                <div className="link1">
-                    Heard something about me?
-                    <div className="link-circle">
-                        <ChevronRightIcon />
+
+                <div className="group">
+                        <div className="group-name-container">
+                            <div className="group-name-container-line"></div>
+                            <div className="group-name">Important Links</div>
+                            <div className="group-name-container-line"></div>
+                        </div>
+                        <div className="link1">
+                            My professional side
+                            <div className="link-circle">
+                                <CallMadeIcon/>
+                            </div>
+                        </div>
+                        <div className="link1">
+                            Date me?
+                            <div className="link-circle">
+                                <CallMadeIcon/>
+                            </div>
+                        </div>
+                        <div className="link1">
+                            Anime Tracker List
+                            <div className="link-circle">
+                                <ChevronRightIcon/>
+                            </div>
+                        </div>
+                        <div className="link1">
+                            Public Bucket List
+                            <div className="link-circle">
+                                <ChevronRightIcon/>
+                            </div>
+                        </div>
+                        <div className="link1">
+                            Movie Personality I resonate the most
+                            <div className="link-circle">
+                                <BarChartIcon/>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                    <div className="group">
+                        <div className="group-name-container">
+                            <div className="group-name-container-line"></div>
+                            <div className="group-name">🎬 Movie Reviews</div>
+                            <div className="group-name-container-line"></div>
+                        </div>
+                        <div className="link-2">
+                            <img
+                                src="https://m.media-amazon.com/images/S/pv-target-images/c7fc75a423fc33698265a27fe446a41026f3c8642fd6c8706c43b897d2ffb3e6.jpg"
+                                alt="Movie Thumbnail"
+                            />
+                            <div className="title">
+                                My Personal Takes on Cinema 🍿
+                            </div>
+                            <div className="desc">
+                                Honest, chaotic, sometimes deep reviews of movies I watch—ranging from cinematic masterpieces to “I can’t believe I sat through that.”
+                            </div>
+                            <div className="buy-btn">
+                                Read My Reviews
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="group">
+                        <div className="group-name-container">
+                            <div className="group-name-container-line"></div>
+                            <div className="group-name">Current Playlist</div>
+                            <div className="group-name-container-line"></div>
+                        </div>
+                        <iframe src="https://open.spotify.com/embed/playlist/4LzYe8vJ0b38h2bh6iorgv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
             </div>
 
             <ControlFooter />
@@ -75,7 +147,7 @@ const Container = styled.div`
     width: 100vw;
     min-height: 100vh;
     background-color: #000;
-    
+
     margin-bottom: 64px;
 
     /* padding-bottom: 100px; */
@@ -86,6 +158,14 @@ const Container = styled.div`
     /* background-attachment: fixed; */
 
     padding: 30px;
+
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+
+    .main-content{
+        max-width: 500px;
+    }
 
     .user-data{
         display: flex;
@@ -188,6 +268,7 @@ const Container = styled.div`
         
         .group{
             width: 100%;
+            margin-top: 70px;
 
             .group-name-container{
                 margin: 30px 0;
@@ -213,13 +294,13 @@ const Container = styled.div`
             }
 
             .link1{
-                background-color: #f5f5f5;
+                background-color: #363636;
                 font-size: 0.75rem;
                 font-weight: 500;
                 text-align: center;
                 padding: 15px 30px;
                 border-radius: 100px;
-                color: #333;
+                color: #e5e5e5;
                 margin-bottom: 5px;
 
                 display: flex; 
@@ -236,7 +317,8 @@ const Container = styled.div`
                     width: 40px;
                     border-radius: 50%;
 
-                    background-color: #d9dfef;
+                    background-color: #0095f6;
+                    /* background-color: #3c4f5b; */
 
                     right: -10px;
 
@@ -245,18 +327,18 @@ const Container = styled.div`
 
                     svg{
                         font-size: 1rem;
-                        fill: #333;
+                        fill: #e5e5e5;
                     }
                 }
 
             }
 
             .link-2{
-                background-color: #f5f5f5;
+                background-color: #363636;
+                color: #e5e5e5;
                 
                 padding: 30px;
                 border-radius: 30px;
-                color: #333;
                 margin-bottom: 5px;
                 margin-top: 30px;
 
@@ -343,7 +425,7 @@ const Container = styled.div`
                 }
 
                 .title{
-                    color: #333;
+                    color: #e5e5e5;
                     font-size: 0.85rem;
                     font-weight: 600;
                     margin-top: 10px;
@@ -351,7 +433,7 @@ const Container = styled.div`
                 }
 
                 .desc{
-                    color: #333;
+                    color: #e5e5e5;
                     font-size: 0.75rem;
                     font-weight: 300;
                     margin-top: 10px;
@@ -359,7 +441,7 @@ const Container = styled.div`
                 }
 
                 .date{
-                    color: #333;
+                    color: #e5e5e5;
                     font-size: 0.65rem;
                     font-weight: 300;
                     margin-top: 10px;
@@ -368,10 +450,11 @@ const Container = styled.div`
                 }
 
                 .buy-btn{
-                    margin-top: 10px;
-                    background-color: yellowgreen;
+                    margin-top: 20px;
+                    /* background-color: yellowgreen; */
+                    background-color: #3c4f5b;
                     font-size: 0.85rem;
-                    color: #333;
+                    color: #e5e5e5;
                     font-weight: 600;
                     padding: 15px 15px;
                     width: 100%;

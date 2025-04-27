@@ -56,6 +56,7 @@ const Container = styled.div`
     left: 0;
 
     width: 100vw;
+
     height: 64px;
     border-top: 1px solid #313231;
 

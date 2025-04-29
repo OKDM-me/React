@@ -1,90 +1,74 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled from 'styled-components'
+import React from "react";
+import styled from 'styled-components';
 import ControlFooter from "../../Components/ControlFooter";
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import BackControl from "../../Components/BackControl";
 
-
-const publicBucketList = [
-  {
-    title: "Solo Trip to the Mountains",
-    completed: true,
-    completedOn: "15 Oct 2024",
-    desc: "Booked a random ticket to Himachal, hiked till my legs gave up, made friends with a dog named Whiskey, and watched the stars alone at 2 AM. Peak main-character energy."
-  },
-  {
-    title: "Skydiving",
-    completed: true,
-    completedOn: "05 Feb 2025",
-    desc: "Was terrified till the moment I jumped, then felt more alive than ever. 10/10 would jump out of a plane again."
-  },
-  {
-    title: "Get a Tattoo",
-    completed: false,
-    completedOn: null,
-    desc: ""
-  },
-  {
-    title: "Attend a Music Festival",
-    completed: true,
-    completedOn: "02 Dec 2024",
-    desc: "Screamed my lungs out at NH7 Weekender, lost my voice but found my rhythm. Camped out with strangers who felt like old friends."
-  },
-  {
-    title: "Try a 3AM Street Food Tour",
-    completed: true,
-    completedOn: "12 Jan 2025",
-    desc: "Hit every momo, chaap, and roll joint in Delhi post-midnight. Regret nothing. Except maybe the stomach ache next morning."
-  },
-  {
-    title: "Learn to Surf",
-    completed: false,
-    completedOn: null,
-    desc: ""
-  },
-  {
-    title: "Crash a Wedding (and Dance)",
-    completed: true,
-    completedOn: "08 Nov 2024",
-    desc: "Snuck into a Punjabi wedding with a friend. Ate like a king, danced like no one was watching. No regrets, just vibes."
-  }
-];
-
-const sortedBucketList = [...publicBucketList].sort((a, b) => {
-  return b.completed - a.completed;
-});
-
 const MyJournal = () => {
-  return (
-    <Container>
-      <div className="main-content">
-        <BackControl />
-        <div className="title">Public Bucket List</div>
-        <div className="desc">Public Bucket List? It’s my open journal of chaos, thrill, and dopamine hits. Just a 22-year-old ticking off all the wild, wholesome, and ‘tell-my-grandkids’ kind of moments. If I’ve done it, you’ll know how it went. If I haven’t, stay tuned — it’s coming.</div>
+    return (
+        <Container>
+            <div className="main-content">
+                <BackControl />
+                <div className="title">My Travis Scott India Concert Experience</div>
+                <div className="desc">
+                    18 Oct, 2025 - Delhi
+                </div>
 
-        <div className="full-list">
-          {sortedBucketList.map((item, index) => (
-            <div className="item" key={index}>
-              <label>
-                <input type="checkbox" checked={item.completed} readOnly />
-                <div className="item-title">{item.title}</div>
-              </label>
-              {item.completed && (
-                <>
-                  <div className="completed-date">{item.completedOn}</div>
-                  <div className="item-desc">{item.desc}</div>
-                </>
-              )}
+                <div className="journal">
+                    <img src="https://fi-cdn.vettix.org/e-462130-5863271.jpg" alt="" />
+
+                    <div className="sub-desc">
+                        I swear, nothing — and I mean *nothing* — prepared me for what I felt the night Travis touched down in India. It wasn’t just a concert; it was a cultural reset, a madness marathon, a main-character origin story. The kind of chaos that lives in group chats and memory lanes forever.
+                    </div>
+
+                    <div className="sub-desc">
+                        I went in expecting loud music and maybe a story or two. What I got instead? Emotional whiplash, sweaty hugs from strangers, and the kind of high that didn’t need substances — just bass drops and lyrics that hit harder than heartbreak.
+                    </div>
+
+                    <div className="sub-title">From Refresh to Redemption</div>
+                    <div className="sub-title-desc">
+                        Had five tabs open, bank OTPs flying in, and my friends screaming in the background. Got one ticket after 47 minutes and two panic attacks. Felt like winning KBC, not gonna lie.
+                    </div>
+
+                    <div className="sub-title">Hyped, Broke, and Glowing</div>
+                    <div className="sub-title-desc">
+                        Spent 2 hours picking the right fit — ended up wearing my lucky tee and fake Travis merch. Uber bill hit me harder than Travis’ bass, but we move.
+                    </div>
+
+                    <div className="sub-title">God Tier Entrance</div>
+                    <div className="sub-title-desc">
+                        Lights cut. Bass dropped. Travis walked out like an anime protagonist. We screamed like bhakts at a temple. I felt my spine vibrate.
+                    </div>
+
+                    <div className="sub-title">One Shoe. No Regrets.</div>
+                    <div className="sub-title-desc">
+                        Mosh pit was straight-up *WWE meets EDM*. I went in with two shoes, came out with one, and a stranger’s phone number. Life-changing stuff.
+                    </div>
+
+                    <div className="sub-title">No Footage. Only Vibes.</div>
+                    <div className="sub-title-desc">
+                        Phone died halfway through “SICKO MODE”. But that moment? Locked in my brain with Dolby Atmos. Honestly, some memories hit harder unfiltered.
+                    </div>
+
+                    <div className="sub-title">Still Processing</div>
+                    <div className="sub-title-desc">
+                        Walking back alone, hoodie on, rewatching everything in my head. Could hear the bass echo in my bones. Realized I'd just lived a bucket-list moment.
+                    </div>
+
+                    <div className="sub-desc">
+                        Even now, days later, I randomly smile thinking about it. Travis didn’t just perform — he left a mark. On my wallet, my shoes, and my soul.
+                    </div>
+
+                    <div className="sub-desc">
+                        If you weren’t there? You missed history. If you were? You know exactly what I mean when I say — that night, we didn’t survive... we *raged*.
+                    </div>
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-      <ControlFooter />
-    </Container>
-  )
-}
+            <ControlFooter />
+        </Container>
+    );
+};
 
-export default MyJournal
+export default MyJournal;
 
 const Container = styled.div`
   width: 100vw;
@@ -122,6 +106,39 @@ const Container = styled.div`
           margin-top: 10px;
           font-weight: 200;
           font-size: 0.85rem;
+      }
+
+
+      .journal{
+        margin-top: 30px;
+
+        img{
+            width: 100%;
+            padding: 10px;
+            padding-bottom: 30px;
+            margin-bottom: 20px;
+            background-color: white;
+            transform: rotate(-2deg);
+        }
+
+        .sub-desc{
+            margin-top: 10px;
+            font-weight: 200;
+            font-size: 0.85rem;
+        }
+
+        .sub-title{
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .sub-title-desc{
+            margin-top: 10px;
+            font-weight: 200;
+            font-size: 0.85rem;
+            margin-left: 25px;
+        }
       }
 
       .full-list{

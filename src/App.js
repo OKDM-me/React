@@ -14,6 +14,7 @@ import UserProfile from "./Screens/InstaUI/UserProfile";
 import GetReplies from "./Screens/InstaUI/GetReplies";
 import GetVotes from "./Screens/InstaUI/GetVotes";
 import MyList from "./Screens/InstaUI/MyList";
+import MyJournal from "./Screens/InstaUI/MyJournal";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/user/getreplies" element={<GetReplies />} />
         <Route path="/user/getvotes" element={<GetVotes />} />
         <Route path="/user/mylist" element={<MyList />} />
+        <Route path="/user/myjournal" element={<MyJournal />} />
 
         <Route path="/my-reviews" element={<MyReviews />} />
         <Route path="/votes" element={<VoteAnswer />} />

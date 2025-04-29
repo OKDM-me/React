@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import ControlFooter from "../../Components/ControlFooter";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-import sampleDp from "../../Images/sampledp.png"
-
 import SmsOutlinedIcon from '@material-ui/icons/SmsOutlined';
+import BackControl from "../../Components/BackControl";
 
 const GetReplies = () => {
     const [replies, setReplies] = useState([]);
@@ -21,10 +20,7 @@ const GetReplies = () => {
     return (
         <Container>
             <div className="main-content">
-                <div className="back-control">
-                    <ArrowBackIcon />
-                    @nayakpenguin
-                </div>
+                <BackControl/>
                 <div className="question">What are your honest thoughts on my Instagram profile?</div>
                 <div className="desc">I'm trying to improve my personal brand. Feel free to give feedback on the vibe, content, or overall look. Be honest!</div>
                 <textarea

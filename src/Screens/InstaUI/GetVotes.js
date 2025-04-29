@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from 'styled-components'
 import ControlFooter from "../../Components/ControlFooter";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import BackControl from "../../Components/BackControl";
+import CheckIcon from '@material-ui/icons/Check';
 
 const characterOptions = [
     {
@@ -62,10 +64,7 @@ const GetVotes = () => {
     return (
         <Container>
             <div className="main-content">
-                <div className="back-control">
-                    <ArrowBackIcon />
-                    @nayakpenguin
-                </div>
+                <BackControl/>
                 <div className="question">Which character do I give vibes of?</div>
                 <div className="desc">Which character gives off my energy? 👀 Cast your vote — might just flex it on my profile.</div>
 
@@ -84,12 +83,17 @@ const GetVotes = () => {
                                     onClick={() => setSelected(index)}
                                 >
                                     {selected === index ? "Voted" : "Vote"}
+                                    
+                                    {
+                                        selected === index ? <CheckIcon/> : null
+                                    }
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+            <ControlFooter/>
         </Container>
     )
 }
@@ -240,6 +244,16 @@ const Container = styled.div`
                         border: 1px solid #0095f6;
                         border-radius: 10px;
                         text-align: center;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        svg{
+                            font-size: 1rem;
+                            margin-left: 5px;
+                            margin-top: -2.5px;
+                        }
                     }
 
                     .trans{

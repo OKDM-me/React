@@ -1,16 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from 'styled-components'
-import CallMadeIcon from '@material-ui/icons/CallMade';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import AttachFileIcon from '@material-ui/icons/AttachFile';
-
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import BarChartIcon from '@material-ui/icons/BarChart';
 import ControlFooter from "../../Components/ControlFooter";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutlined';
-import RoomIcon from '@material-ui/icons/Room';
 
 import sampleDp from "../../Images/sampledp.png"
 

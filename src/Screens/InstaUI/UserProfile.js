@@ -147,6 +147,12 @@ const UserProfile = () => {
                             <CallMadeIcon />
                         </div>
                     </div>
+                    <div className="link1">
+                        My Travis Scott India Concert Experience
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="group">
@@ -354,7 +360,6 @@ const Container = styled.div`
                     }
                 }
             }
-
         }
         
         .group{

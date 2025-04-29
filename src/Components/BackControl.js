@@ -2,10 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from 'styled-components'
 
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { useNavigate } from "react-router-dom";
 
 const BackControl = () => {
+  const navigate = useNavigate();
+  
   return (
-    <Container>
+    <Container onClick={() => navigate("/")}>
         <ArrowBackIcon />
         @nayakpenguin
     </Container>

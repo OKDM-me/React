@@ -14,6 +14,8 @@ import RoomIcon from '@material-ui/icons/Room';
 
 import sampleDp from "../../Images/sampledp.png"
 
+import SmsOutlinedIcon from '@material-ui/icons/SmsOutlined';
+
 const GetReplies = () => {
     const [replies, setReplies] = useState([]);
     const [input, setInput] = useState("");
@@ -40,6 +42,20 @@ const GetReplies = () => {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                 />
+                <div className="main-btns">
+                    <div className="btn-1 trans">Send</div>
+                </div>
+
+                <div className="extra-btns">
+                    <SmsOutlinedIcon className="fadeicon"/>
+                    <div className="svg-frd">
+                        <svg aria-label="Share" class="x1lliihq x1n2onr6 xyb1xck" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Share</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                    </div>
+                </div>
+
+                <div className="comment-info">
+                    *The page owner has chosen to keep comments private.
+                </div>
             </div>
             <ControlFooter />
         </Container>
@@ -120,13 +136,69 @@ const Container = styled.div`
             width: 100%;
             border-radius: 10px;
             height: 200px;
-            margin: 20px 0;
+            margin: 20px 0 -5px 0;
             outline: none;
-            background-color: transparent;
+            /* background-color: transparent; */
             background-color:rgb(22, 22, 22);
             border: 1px solid #363636;
+            border-bottom: none;
             padding: 20px;
             color: white;
+            resize: none;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .main-btns{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .btn-1{
+                width: 100%;
+                font-size: 0.85rem;
+                padding: 10px 15px;
+                background-color: #0095f6;
+                border-radius: 10px;
+                text-align: center;
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+            }
+
+            .secondary{
+                background-color: #363636;
+            }
+
+            .trans{
+                background-color: transparent;
+                border: 1px solid rgb(119, 118, 118);
+            }
+        }
+
+        .extra-btns{
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+
+            svg{
+                margin-right: 15px;
+                /* fill: grey; */
+                font-size: 1.75rem;
+            }
+
+            .fadeicon{
+                fill: grey;
+            }
+
+            .svg-frd{
+                margin-bottom: -5px;
+            }
+        }
+
+        .comment-info{
+            font-size: 0.75rem;
+            font-weight: 200;
+            font-style: italic;
         }
     }
 

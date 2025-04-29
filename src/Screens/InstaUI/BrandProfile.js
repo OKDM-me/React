@@ -12,6 +12,10 @@ import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutline
 import RoomIcon from '@material-ui/icons/Room';
 
 import sampleBrandDp from "../../Images/samplebranddp.jpeg"
+import brandproduct1 from "../../Images/brandproduct1.png"
+import brandproduct2 from "../../Images/brandproduct2.png"
+import brandproduct3 from "../../Images/brandproduct3.png"
+
 
 const BrandProfile = () => {
     const albumData = [
@@ -147,7 +151,7 @@ const BrandProfile = () => {
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
-                        Who are we? 
+                        Who are we?
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
@@ -166,21 +170,60 @@ const BrandProfile = () => {
                         <div className="group-name">Our Products</div>
                         <div className="group-name-container-line"></div>
                     </div>
-                    <div className="link1">
-                        Who are we? 
-                        <div className="link-circle">
-                            <ChevronRightIcon />
+
+                    <div className="shop">
+                        <div className="link-2-shop">
+                            <div className="left"><img src={brandproduct1} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                <div className="title">
+                                    Cute hand made penguin storage basket | Handcrafted
+                                </div>
+                                <div className="price">
+                                    <div className="main-price"><span>₹</span>669</div> 
+                                    <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
+                                </div>
+                                <div className="buy-btn">Add to Cart</div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="link1">
-                        How it started
-                        <div className="link-circle">
-                            <ChevronRightIcon />
+                        <div className="link-2-shop">
+                            <div className="left"><img src={brandproduct2} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                <div className="title">
+                                    Cute hand bag | Flower bag | Handcrafted - Women all size
+                                </div>
+                                <div className="price">
+                                    <div className="main-price"><span>₹</span>399</div> 
+                                    <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
+                                </div>
+                                <div className="buy-btn">Add to Cart</div>
+                            </div>
+                        </div>
+                        <div className="link-2-shop">
+                            <div className="left"><img src={brandproduct3} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                <div className="title">
+                                    Storage bucket 
+                                </div>
+                                <div className="price">
+                                    <div className="main-price"><span>₹</span>999</div> 
+                                    <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
+                                </div>
+                                <div className="buy-btn">Add to Cart</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <ControlFooter />
         </Container>
     )
@@ -378,141 +421,141 @@ const Container = styled.div`
 
             }
 
-            .link-2{
-                background-color: #363636;
-                color: #e5e5e5;
-                
-                padding: 30px;
-                border-radius: 30px;
-                margin-bottom: 5px;
-                margin-top: 30px;
+            .shop{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap; 
+                justify-content: space-between;
 
-                display: flex; 
-                align-items: center;
-                flex-direction: column;
-
-                img{
-                    width: 100%;
-                    border-radius: 30px;
-                    margin-bottom: 10px;
-                }
-
-                .qr-image{
-                    border-radius: 5px;
-                }
-
-                .img-btn-holder{
+                .link-2-shop{
                     position: relative;
-                    height: auto;
+                    padding-bottom: 100px;
+                    width: calc(50% - 5px);
+                    /* background-color: #363636; */
+                    color: #e5e5e5;
                     
-                    .hold-sq-image{
-                        position: relative;
+                    border-radius: 10px;
+                    margin-bottom: 5px;
+                    margin-top: 30px;
+
+                    display: flex; 
+                    flex-direction: column;
+                    align-items: flex-start;
+
+
+                    .left{
+                        /* width: 50%; */
                         width: 100%;
-                        aspect-ratio: 1/1;
-                        overflow: hidden;
-                        display: grid;
-                        place-items: center;
-                        border-radius: 30px;
-                        /* border-radius: 5px; */
-    
+                        
                         img{
                             width: 100%;
-                            height: 100%;
-                            /* border-radius: 5px; */
-                            /* border-radius: 0px; */
+                            border-radius: 10px;
+                            margin-bottom: 5px;
                         }
                     }
-                }
 
+                    .right{
+                        /* width: 50%; */
+                        width: 100%;
+                        /* margin-left: 10px; */
 
-                .image-btns{
-                    position: absolute;
-                    width: calc(100% + 30px);
-                    display: flex;
-                    justify-content: space-between;
-                    top: calc(50% - 15px);
-                    margin-left: -15px;
-                    border-radius: 100px;
+                        .tags{
+                            margin-top: 10px;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            display: none;
+                            
+                            .tag{
+                                background-color: pink;
+                                font-size: 0.85rem;
+                                color: #333;
+                                font-weight: 600;
+                                padding: 5px 10px;
+                                border-radius: 100px;
+                                margin-right: 5px;
+                                margin-bottom: 5px;
+                            }
+                        }
 
-                    button{
-                        height: 30px;
-                        width: 30px;
-                        border-radius: 100px;
-                        border: 1px solid #e5e5e5;
-                        background-color: white;
-                        display: grid;
-                        place-items: center;
+                        .title{
+                            color: #e5e5e5;
+                            font-size: 0.75rem;
+                            font-weight: 600;
+                            width: 100%;
+                            margin-bottom: 10px;
+                        }
 
-                        svg{
-                            fill: #333;
+                        .main-price{
+                            margin-top: 10px;
+                            display: flex;
+                            align-items: flex-start;
+
+                            color: #e5e5e5;
+                            font-size: 1.15rem;
+                            font-weight: 600;
+                            font-family: Arial, sans-serif;
+                            
+                            span{
+                                font-family: Arial, sans-serif;
+                                font-size: 0.75rem;
+                                font-weight: 300;
+                                margin-right: 3px;
+                            }
+                        }
+                        
+                        .old-price{
+                            display: flex;
+                            align-items: flex-end;
+                            width: 100%;
+                            color: #e5e5e5;
+                            font-size: 0.7rem;
+                            
+
+                            .strike{
+                                text-decoration: line-through;
+                                margin-right: 5px;
+                            }
+                        }
+
+                        .desc{
+                            color: #e5e5e5;
+                            font-size: 0.75rem;
+                            font-weight: 300;
+                            margin-top: 10px;
+                            width: 100%;
+                        }
+
+                        .date{
+                            color: #e5e5e5;
+                            font-size: 0.65rem;
+                            font-weight: 300;
+                            margin-top: 10px;
+                            width: 100%;
+                            font-weight: 500;
+                        }
+
+                        .price{
+                            position: absolute;
+                            bottom: 50px;
+                            left: 0;
+                            /* padding-left: 10px; */
+                        }
+
+                        .buy-btn{
+                            position: absolute;
+                            margin-top: 10px;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            font-size: 0.85rem;
+                            padding: 10px 15px;
+                            background-color: #0095f6;
+                            border-radius: 10px;
+                            text-align: center;
                         }
                     }
-                }
-
-                .tags{
-                    margin-top: 10px;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
-
-                    .price{
-                        background-color: yellowgreen;
-                        font-size: 0.85rem;
-                        color: #333;
-                        font-weight: 600;
-                        padding: 5px 10px;
-                        border-radius: 100px;
-                        margin-right: 5px;
-                    }
-                    
-                    .tag{
-                        background-color: pink;
-                        font-size: 0.85rem;
-                        color: #333;
-                        font-weight: 600;
-                        padding: 5px 10px;
-                        border-radius: 100px;
-                        margin-right: 5px;
-                    }
-                }
-
-                .title{
-                    color: #e5e5e5;
-                    font-size: 0.85rem;
-                    font-weight: 600;
-                    margin-top: 10px;
-                    width: 100%;
-                }
-
-                .desc{
-                    color: #e5e5e5;
-                    font-size: 0.75rem;
-                    font-weight: 300;
-                    margin-top: 10px;
-                    width: 100%;
-                }
-
-                .date{
-                    color: #e5e5e5;
-                    font-size: 0.65rem;
-                    font-weight: 300;
-                    margin-top: 10px;
-                    width: 100%;
-                    font-weight: 500;
-                }
-
-                .buy-btn{
-                    margin-top: 20px;
-                    /* background-color: yellowgreen; */
-                    background-color: #3c4f5b;
-                    font-size: 0.85rem;
-                    color: #e5e5e5;
-                    font-weight: 600;
-                    padding: 15px 15px;
-                    width: 100%;
-                    border-radius: 30px;
-                    text-align: center;
                 }
             }
         }

@@ -12,6 +12,7 @@ import VoteAnswer from "./Screens/VoteAnswer";
 import MyReviews from "./Screens/MyReviews";
 import UserProfile from "./Screens/InstaUI/UserProfile";
 import GetReplies from "./Screens/InstaUI/GetReplies";
+import GetVotes from "./Screens/InstaUI/GetVotes";
 
 const App = () => {
   return (
@@ -21,9 +22,11 @@ const App = () => {
         <Route path="/" element={<UserProfile />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/user/getreplies" element={<GetReplies />} />
+        <Route path="/user/getvotes" element={<GetVotes />} />
+
         <Route path="/my-reviews" element={<MyReviews />} />
+        <Route path="/votes" element={<VoteAnswer />} />
         <Route path="/user/getvalues" element={<GetAnswers1 />} />
-        <Route path="/user/getvaluespoll" element={<VoteAnswer />} />
         <Route path="/@mrungreat" element={<UserArya />} />
         <Route path="/mrungreat" element={<UserArya />} />
         <Route path="/@nayakpenguin" element={<Landing />} />

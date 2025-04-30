@@ -16,6 +16,26 @@ import brandproduct1 from "../../Images/brandproduct1.png"
 import brandproduct2 from "../../Images/brandproduct2.png"
 import brandproduct3 from "../../Images/brandproduct3.png"
 
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+
+import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
+
+const renderStars = (rating) => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 >= 0.5;
+
+    for (let i = 0; i < fullStars; i++) {
+        stars.push(<FaStar key={`full-${i}`} />);
+    }
+    if (hasHalfStar) {
+        stars.push(<FaStarHalfAlt key="half" />);
+    }
+    while (stars.length < 5) {
+        stars.push(<FaRegStar key={`empty-${stars.length}`} />);
+    }
+    return stars;
+};
 
 const BrandProfile = () => {
     const albumData = [
@@ -173,6 +193,7 @@ const BrandProfile = () => {
 
                     <div className="shop">
                         <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
                             <div className="left"><img src={brandproduct1} alt="" /></div>
                             <div className="right">
                                 <div className="tags">
@@ -181,43 +202,96 @@ const BrandProfile = () => {
                                 <div className="title">
                                     Cute hand made penguin storage basket | Handcrafted
                                 </div>
+                                <div className="reviews">
+                                    <StarsWrapper>
+                                        {renderStars(4.3)}
+                                    </StarsWrapper>
+                                    <div className="review-info">4.3 (38 Users)</div>
+                                </div>
                                 <div className="price">
-                                    <div className="main-price"><span>₹</span>669</div> 
+                                    <div className="main-price"><span>₹</span>669</div>
                                     <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
                                 </div>
-                                <div className="buy-btn">Add to Cart</div>
+                                <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div>
                             </div>
                         </div>
                         <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
                             <div className="left"><img src={brandproduct2} alt="" /></div>
                             <div className="right">
                                 <div className="tags">
                                     <div className="tag">Best seller</div>
                                 </div>
                                 <div className="title">
-                                    Cute hand bag | Flower bag | Handcrafted - Women all size
+                                    Cute hand bag | Flower bag | Handcrafted - Women in this og ...
+                                </div>
+                                <div className="reviews">
+                                    <StarsWrapper>
+                                        {renderStars(3.5)}
+                                    </StarsWrapper>
+                                    <div className="review-info">3.5 (12 Users)</div>
                                 </div>
                                 <div className="price">
-                                    <div className="main-price"><span>₹</span>399</div> 
+                                    <div className="main-price"><span>₹</span>399</div>
                                     <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
                                 </div>
-                                <div className="buy-btn">Add to Cart</div>
+                                <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div>
                             </div>
                         </div>
                         <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
                             <div className="left"><img src={brandproduct3} alt="" /></div>
                             <div className="right">
                                 <div className="tags">
                                     <div className="tag">Best seller</div>
                                 </div>
                                 <div className="title">
-                                    Storage bucket 
+                                    Storage bucket
+                                </div>
+                                <div className="reviews">
+                                    <StarsWrapper>
+                                        {renderStars(4.5)}
+                                    </StarsWrapper>
+                                    <div className="review-info">4.5 (76 Users)</div>
                                 </div>
                                 <div className="price">
-                                    <div className="main-price"><span>₹</span>999</div> 
+                                    <div className="main-price"><span>₹</span>999</div>
                                     <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
                                 </div>
-                                <div className="buy-btn">Add to Cart</div>
+                                <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -573,7 +647,7 @@ const Container = styled.div`
                             /* position: absolute;
                             bottom: 0;
                             left: 0; */
-                            width: 100%;
+                            width: calc(100% - 7.5px);
 
                             display: flex;
                             align-items: center;
@@ -642,11 +716,11 @@ const Container = styled.div`
 
             .shop > :nth-child(odd) {
                 padding-right: 7.5px;
+
                 position: relative; 
 
                 .border-bottom-light{
                     left: 0;
-                    background-color: white;
                 }
 
                 .right{
@@ -659,14 +733,25 @@ const Container = styled.div`
                     }
 
                     .btns{
-                        width: calc(100% - 7.5px);
                         position: absolute;
-                        left: 0px;
+                        right: 7.5px;
                         bottom: 0px;
-                        padding-left: 5px;
-                        margin-left: 5px;
                     }
                 }
             }
         }
 `
+
+const StarsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  color: #f5c518; /* IMDb star color */
+  
+  svg{
+    font-size: 12px;
+    fill: #f5c518; /* IMDb star color */
+  }
+`;

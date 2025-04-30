@@ -429,8 +429,8 @@ const Container = styled.div`
 
                 .link-2-shop{
                     position: relative;
-                    padding-bottom: 100px;
-                    width: calc(50% - 5px);
+                    padding-bottom: 140px;
+                    width: 50%;
                     /* background-color: #363636; */
                     color: #e5e5e5;
                     
@@ -441,6 +441,14 @@ const Container = styled.div`
                     display: flex; 
                     flex-direction: column;
                     align-items: flex-start;
+
+                    .border-bottom-light{
+                        position: absolute; 
+                        height: 1px;
+                        background-color:#313231;
+                        bottom: -15px;
+                        width: 90%;
+                    }
 
 
                     .left{
@@ -487,6 +495,21 @@ const Container = styled.div`
                             margin-bottom: 10px;
                         }
 
+                        .reviews{
+                            display: flex;
+
+                            .review-info{
+                                display: flex;
+                                align-items: flex-end;
+                                width: 100%;
+                                color: #e5e5e5;
+                                font-size: 0.7rem;
+                                margin-left: -15px;
+                                font-family: Arial, sans-serif;
+                                font-style: italic;
+                            }
+                        }
+
                         .main-price{
                             margin-top: 10px;
                             display: flex;
@@ -511,11 +534,14 @@ const Container = styled.div`
                             width: 100%;
                             color: #e5e5e5;
                             font-size: 0.7rem;
+                            font-family: Arial, sans-serif;
+                            margin-top: 5px;
                             
 
                             .strike{
                                 text-decoration: line-through;
                                 margin-right: 5px;
+                                font-family: Arial, sans-serif;
                             }
                         }
 
@@ -537,24 +563,108 @@ const Container = styled.div`
                         }
 
                         .price{
-                            position: absolute;
-                            bottom: 50px;
-                            left: 0;
+                            /* position: absolute;
+                            bottom: 85px;
+                            left: 0; */
                             /* padding-left: 10px; */
                         }
 
-                        .buy-btn{
-                            position: absolute;
-                            margin-top: 10px;
+                        .btns{
+                            /* position: absolute;
                             bottom: 0;
-                            left: 0;
+                            left: 0; */
                             width: 100%;
-                            font-size: 0.85rem;
-                            padding: 10px 15px;
-                            background-color: #0095f6;
-                            border-radius: 10px;
-                            text-align: center;
+
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            
+                            .buy-btn{
+                                width: 100%;
+                                margin-top: 5px;
+                                font-size: 0.85rem;
+                                padding: 10px 15px;
+                                background-color: #0095f6;
+                                border-radius: 10px;
+                                text-align: center;
+                            }
+
+                            .top-svgs{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                svg{
+                                    font-size: 1.65rem;
+                                }
+
+                                .left-svgs{
+                                    svg{
+                                        font-size: 1.65rem;
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+
+                            
                         }
+                    }
+                }
+            }
+
+            .shop > :nth-child(even) {
+                border-left: 1px solid #313231;
+                padding-left: 7.5px;
+                border-radius: 0;
+                position: relative; 
+
+                .border-bottom-light{
+                    right: 0;
+                }
+
+                .right{
+                    /* position: relative;  */
+
+                    .price{
+                        position: absolute;
+                        bottom: 85px;
+                        left: 7.5px;
+                    }
+
+                    .btns{
+                        position: absolute;
+                        left: 7.5px;
+                        bottom: 0px;
+                    }
+                }
+            }
+
+            .shop > :nth-child(odd) {
+                padding-right: 7.5px;
+                position: relative; 
+
+                .border-bottom-light{
+                    left: 0;
+                    background-color: white;
+                }
+
+                .right{
+                    /* position: relative;  */
+
+                    .price{
+                        position: absolute;
+                        bottom: 85px;
+                        left: 0px;
+                    }
+
+                    .btns{
+                        width: calc(100% - 7.5px);
+                        position: absolute;
+                        left: 0px;
+                        bottom: 0px;
+                        padding-left: 5px;
+                        margin-left: 5px;
                     }
                 }
             }

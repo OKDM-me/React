@@ -16,6 +16,7 @@ import GetVotes from "./Screens/InstaUI/GetVotes";
 import MyList from "./Screens/InstaUI/MyList";
 import MyJournal from "./Screens/InstaUI/MyJournal";
 import BrandProfile from "./Screens/InstaUI/BrandProfile";
+import Shop from "./Screens/InstaUI/Shop";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Routes>
         {/* <Route path="/" element={<LandingPage />} /> */}
         <Route path="/" element={<UserProfile />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/brand" element={<BrandProfile />} />
         
         <Route path="/dashboard" element={<Dashboard />} />

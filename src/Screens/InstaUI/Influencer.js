@@ -192,6 +192,10 @@ const Influencer = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="share-my-page">
+                    {/* igonel.ink/somyakodan_ */}
+                </div>
             </div>
 
             <ControlFooter />
@@ -641,6 +645,14 @@ const Container = styled.div`
                 }
             }
         }
+
+    .share-my-page{
+        height: 20px;
+        /* margin: 60px 0 30px 0;
+        font-size: 0.75rem;
+        color: cornflowerblue;
+        text-align: center; */
+    }
 `
 
 const StarsWrapper = styled.div`

@@ -111,18 +111,18 @@ const Influencer = () => {
                             <img src="https://www.svgrepo.com/show/416500/youtube-circle-logo.svg" alt="" />
                         </div>
                         <div className="social-icon">
-                            <img src="https://cdn.pixabay.com/photo/2021/06/15/12/51/facebook-6338508_1280.png" alt="" />
+                            <img src="https://cdn2.downdetector.com/static/uploads/c/300/f52a5/image11.png" alt="" />
                         </div>
                         <div className="social-icon">
-                            <img src="https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg" alt="" />
-                        </div>
-                        <div className="social-icon">
-                            <img src="https://images.seeklogo.com/logo-png/31/2/flipkart-logo-png_seeklogo-318406.png" alt="" />
+                            <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2020/10/91/5f9b61e42640e.png" alt="" />
                         </div>
                     </div>
                 </div>
 
                 <RedorGreenFlag>
+                    <div className="info">
+                        72% votes for <b>red flag 🚩</b>
+                    </div>
                     {/* <div className="vote-btn"><ArrowLeftIcon/></div> */}
                     <div className="vote-btn"><ArrowDropUpIcon/></div>
                     <div className="box">
@@ -138,49 +138,31 @@ const Influencer = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">Important Links</div>
+                        <div className="group-name">Brand Promotions</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
-                        Watch our Reels
+                        <div><b>@newme.asia</b> code : “SOMY”</div>
                         <div className="link-circle">
                             <CallMadeIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        Buy our Products
+                        <div>Premium analog watches! <b>@hotgadget.store</b> 🛒</div>
                         <div className="link-circle">
                             <CallMadeIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        Which product you like the most?
-                        <div className="link-circle">
-                            <BarChartIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        Collab With Us
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        Mentioned in Forbes for our cool designs
+                        <div>My makeup suggestions <b>@nykaa</b></div>
                         <div className="link-circle">
                             <CallMadeIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        Share Feedback
+                        <div>In love with there phone cases <b>@casecreation</b> 🤭🎀</div>
                         <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        Complaint/Refund
-                        <div className="link-circle">
-                            <ChevronRightIcon />
+                            <CallMadeIcon />
                         </div>
                     </div>
                 </div>
@@ -188,132 +170,25 @@ const Influencer = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">About Us</div>
+                        <div className="group-name">My Content</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
-                        Who are we?
+                        <div>Most loved reel ❤️</div>
                         <div className="link-circle">
-                            <ChevronRightIcon />
+                            <CallMadeIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        How it started
+                        <div><b>New vlog</b> - I watched my first IPL match - RCB 🔥</div>
+                        <div className="link-circle">
+                            <CallMadeIcon />
+                        </div>
+                    </div>
+                    <div className="link1">
+                        <div>Collab with me 🥹</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="group">
-                    <div className="group-name-container">
-                        <div className="group-name-container-line"></div>
-                        <div className="group-name">Our Products</div>
-                        <div className="group-name-container-line"></div>
-                    </div>
-
-                    <div className="shop">
-                        <div className="link-2-shop">
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={brandproduct1} alt="" /></div>
-                            <div className="right">
-                                <div className="tags">
-                                    <div className="tag">Best seller</div>
-                                </div>
-                                <div className="title">
-                                    Cute hand made penguin storage basket | Handcrafted
-                                </div>
-                                <div className="reviews">
-                                    <StarsWrapper>
-                                        {renderStars(4.3)}
-                                    </StarsWrapper>
-                                    <div className="review-info">4.3 (38 Users)</div>
-                                </div>
-                                <div className="price">
-                                    <div className="main-price"><span>₹</span>669</div>
-                                    <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
-                                </div>
-                                <div className="btns">
-                                    <div className="top-svgs">
-                                        <div className="left-svgs">
-                                            <WhatsAppIcon />
-                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
-                                        </div>
-                                        <div className="right-svgs">
-                                            <BookmarkBorderOutlinedIcon />
-                                        </div>
-                                    </div>
-                                    <div className="buy-btn">Add to Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="link-2-shop">
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={brandproduct2} alt="" /></div>
-                            <div className="right">
-                                <div className="tags">
-                                    <div className="tag">Best seller</div>
-                                </div>
-                                <div className="title">
-                                    Cute hand bag | Flower bag | Handcrafted - Women in this og ...
-                                </div>
-                                <div className="reviews">
-                                    <StarsWrapper>
-                                        {renderStars(3.5)}
-                                    </StarsWrapper>
-                                    <div className="review-info">3.5 (12 Users)</div>
-                                </div>
-                                <div className="price">
-                                    <div className="main-price"><span>₹</span>399</div>
-                                    <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
-                                </div>
-                                <div className="btns">
-                                    <div className="top-svgs">
-                                        <div className="left-svgs">
-                                            <WhatsAppIcon />
-                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
-                                        </div>
-                                        <div className="right-svgs">
-                                            <BookmarkBorderOutlinedIcon />
-                                        </div>
-                                    </div>
-                                    <div className="buy-btn">Add to Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="link-2-shop">
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={brandproduct3} alt="" /></div>
-                            <div className="right">
-                                <div className="tags">
-                                    <div className="tag">Best seller</div>
-                                </div>
-                                <div className="title">
-                                    Storage bucket
-                                </div>
-                                <div className="reviews">
-                                    <StarsWrapper>
-                                        {renderStars(4.5)}
-                                    </StarsWrapper>
-                                    <div className="review-info">4.5 (76 Users)</div>
-                                </div>
-                                <div className="price">
-                                    <div className="main-price"><span>₹</span>999</div>
-                                    <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
-                                </div>
-                                <div className="btns">
-                                    <div className="top-svgs">
-                                        <div className="left-svgs">
-                                            <WhatsAppIcon />
-                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
-                                        </div>
-                                        <div className="right-svgs">
-                                            <BookmarkBorderOutlinedIcon />
-                                        </div>
-                                    </div>
-                                    <div className="buy-btn">Add to Cart</div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -493,6 +368,11 @@ const Container = styled.div`
                 height: 60px;
 
                 position: relative;
+
+                b{
+                    display: inline;
+                    margin-right: 5px;
+                }
 
                 .link-circle{
                     position: absolute;
@@ -802,6 +682,18 @@ const RedorGreenFlag = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    margin-top: 80px;
+
+    position: relative;
+
+    .info{
+        position: absolute;
+        top: -25px;
+        font-size: 0.65rem;
+        color: white;
+        left: 50px;
+    }
+
     .vote-btn{
         height: 30px;
         aspect-ratio: 1/1;
@@ -821,7 +713,7 @@ const RedorGreenFlag = styled.div`
     .box{
         border: 2px solid white;
         height: 50px;
-        width: calc(100% - 120px);
+        width: calc(100% - 80px);
         background-color: #333;
         border-radius: 100px;
 

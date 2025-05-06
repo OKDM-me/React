@@ -36,9 +36,9 @@ const ControlFooter = () => {
                     <a href="/">
                         <EditOutlinedIcon/>
                     </a>
-                    <a href="/">
+                    {/* <a href="/">
                         <ShoppingCartOutlinedIcon/>
-                    </a>
+                    </a> */}
                     <a href="/">
                         <AccountCircleOutlinedIcon/>
                     </a>

@@ -9,7 +9,12 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import ControlFooter from "../../Components/ControlFooter";
 import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutlined';
+import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
 import RoomIcon from '@material-ui/icons/Room';
+
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
 import influencerdp from "../../Images/influencerdp.png"
 import brandproduct1 from "../../Images/brandproduct1.png"
@@ -81,7 +86,9 @@ const Influencer = () => {
     return (
         <Container>
             <div className="main-content">
-                <Subscribe/>
+                <Subscribe>
+                    <NotificationsNoneOutlinedIcon />
+                </Subscribe>
                 <div className="user-data">
                     <div className="logo-x-dp">
                         <img src={influencerdp} alt="" />
@@ -91,10 +98,10 @@ const Influencer = () => {
                     <div className="about-desc">Pout Like a Planet — Welcome to the Galaxy of Gorgeous!💋</div>
                     <div className="about-location"><RoomIcon /> India</div>
 
-                    <div className="main-btns">
+                    {/* <div className="main-btns">
                         <div className="btn-1 trans">30K page views</div>
                         <div className="btn-1">Subscribe</div>
-                    </div>
+                    </div> */}
 
                     <div className="socials">
                         <div className="social-icon">
@@ -114,6 +121,19 @@ const Influencer = () => {
                         </div>
                     </div>
                 </div>
+
+                <RedorGreenFlag>
+                    {/* <div className="vote-btn"><ArrowLeftIcon/></div> */}
+                    <div className="vote-btn"><ArrowDropUpIcon/></div>
+                    <div className="box">
+                        <div className="left"></div>
+                        {/* Green Flag 💚  */}
+                        <div className="right">Red Flag 🚩</div>
+                    </div>
+                    <div className="vote-btn"><ArrowDropUpIcon/></div>
+                    {/* <div className="vote-btn"><ArrowRightIcon/></div> */}
+                </RedorGreenFlag>
+
 
                 <div className="group">
                     <div className="group-name-container">
@@ -767,4 +787,76 @@ const Subscribe = styled.div`
     border-radius: 50%;
     background-color: white;
     z-index: 1000;
+
+    display: grid;
+    place-items: center;
+
+    svg{
+        height: 1.25rem;
+        fill: black;
+    }
+`
+
+const RedorGreenFlag = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .vote-btn{
+        height: 30px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: #363636;
+        z-index: 1000;
+
+        display: grid;
+        place-items: center;
+
+        svg{
+            height: 2rem;
+            fill: white;
+        }
+    }
+
+    .box{
+        border: 2px solid white;
+        height: 50px;
+        width: calc(100% - 120px);
+        background-color: #333;
+        border-radius: 100px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 0.75rem;
+        overflow: hidden;
+
+        .left{
+            background-color: #5ca65c;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* text-wrap: nowrap; */
+            white-space: nowrap;
+            width: 28%;
+            border-right: 2px solid white;
+            overflow: hidden;
+            padding: 5px;
+        }
+
+        .right{
+            height: 100%;
+            width: 72%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            background-color: #e94747;
+            overflow: hidden;
+            padding: 5px;
+        }
+    }
 `

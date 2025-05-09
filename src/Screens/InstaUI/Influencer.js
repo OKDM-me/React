@@ -17,9 +17,12 @@ import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 
 import influencerdp from "../../Images/influencerdp.png"
-import brandproduct1 from "../../Images/brandproduct1.png"
-import brandproduct2 from "../../Images/brandproduct2.png"
-import brandproduct3 from "../../Images/brandproduct3.png"
+import influencerproduct1 from "../../Images/influencerproduct1.png"
+import influencerproduct2 from "../../Images/influencerproduct2.png"
+import influencerproduct3 from "../../Images/influencerproduct3.png"
+import influencerproduct4 from "../../Images/influencerproduct4.png"
+import influencerproduct5 from "../../Images/influencerproduct5.png"
+import influencerproduct6 from "../../Images/influencerproduct6.png"
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
@@ -124,13 +127,13 @@ const Influencer = () => {
                         72% votes for <b>red flag 🚩</b>
                     </div>
                     {/* <div className="vote-btn"><ArrowLeftIcon/></div> */}
-                    <div className="vote-btn"><ArrowDropUpIcon/></div>
+                    <div className="vote-btn"><ArrowDropUpIcon /></div>
                     <div className="box">
                         <div className="left"></div>
                         {/* Green Flag 💚  */}
                         <div className="right">Red Flag 🚩</div>
                     </div>
-                    <div className="vote-btn"><ArrowDropUpIcon/></div>
+                    <div className="vote-btn"><ArrowDropUpIcon /></div>
                     {/* <div className="vote-btn"><ArrowRightIcon/></div> */}
                 </RedorGreenFlag>
 
@@ -140,6 +143,12 @@ const Influencer = () => {
                         <div className="group-name-container-line"></div>
                         <div className="group-name">Brand Promotions</div>
                         <div className="group-name-container-line"></div>
+                    </div>
+                    <div className="link1">
+                        <div>Shop all the <b>products I swear by</b></div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
                     </div>
                     <div className="link1">
                         <div><b>@newme.asia</b> code : “SOMY”</div>
@@ -189,6 +198,143 @@ const Influencer = () => {
                         <div>Collab with me 🥹</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Our Products</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+
+                    <div className="shop-2">
+                        <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
+                            <div className="left"><img src={influencerproduct1} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                {/* <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div> */}
+                            </div>
+                        </div>
+                        <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
+                            <div className="left"><img src={influencerproduct4} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                {/* <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div> */}
+                            </div>
+                        </div>
+                        <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
+                            <div className="left"><img src={influencerproduct2} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                {/* <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div> */}
+                            </div>
+                        </div>
+                        <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
+                            <div className="left"><img src={influencerproduct3} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                {/* <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div> */}
+                            </div>
+                        </div>
+                        <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
+                            <div className="left"><img src={influencerproduct5} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                {/* <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div> */}
+                            </div>
+                        </div>
+                        <div className="link-2-shop">
+                            <div className="border-bottom-light"></div>
+                            <div className="left"><img src={influencerproduct6} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
+                                </div>
+                                {/* <div className="btns">
+                                    <div className="top-svgs">
+                                        <div className="left-svgs">
+                                            <WhatsAppIcon />
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="right-svgs">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
+                                    </div>
+                                    <div className="buy-btn">Add to Cart</div>
+                                </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -328,323 +474,521 @@ const Container = styled.div`
             }
         }
         
-        .group{
-            width: 100%;
-            margin-top: 70px;
+    .group{
+        width: 100%;
+        margin-top: 70px;
 
-            .group-name-container{
-                margin: 30px 0;
-                padding: 0 35px;
+        .group-name-container{
+            margin: 30px 0;
+            padding: 0 35px;
 
-                display: flex;
-                align-items: center;
-                justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-                .group-name{
-                    font-size: 0.85rem;
-                    margin: 0 10px;
-                    text-align: center;
-                }
+            .group-name{
+                font-size: 0.85rem;
+                margin: 0 10px;
+                text-align: center;
+            }
 
-                .group-name-container-line{
-                    min-width: 20px;
-                    height: 3px;
-                    border-radius: 100px;
-                    background-color: #676363;
-                    flex: 1;
+            .group-name-container-line{
+                min-width: 20px;
+                height: 3px;
+                border-radius: 100px;
+                background-color: #676363;
+                flex: 1;
+            }
+        }
+
+        .link1{
+            background-color: #363636;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-align: center;
+            padding: 15px 60px;
+            border-radius: 100px;
+            color: #e5e5e5;
+            margin-bottom: 5px;
+
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+
+            height: 60px;
+
+            position: relative;
+
+            b{
+                display: inline;
+                margin-right: 5px;
+            }
+
+            .link-circle{
+                position: absolute;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+
+                background-color: #0095f6;
+                /* background-color: #3c4f5b; */
+
+                right: -10px;
+
+                display: grid;
+                place-items: center;
+
+                svg{
+                    font-size: 1rem;
+                    fill: #e5e5e5;
                 }
             }
 
-            .link1{
-                background-color: #363636;
-                font-size: 0.75rem;
-                font-weight: 500;
-                text-align: center;
-                padding: 15px 60px;
-                border-radius: 100px;
+        }
+
+        .shop{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+
+            .link-2-shop{
+                position: relative;
+                padding-bottom: 140px;
+                width: 50%;
+                /* background-color: #363636; */
                 color: #e5e5e5;
+                
+                border-radius: 10px;
                 margin-bottom: 5px;
+                margin-top: 30px;
 
                 display: flex; 
-                align-items: center;
-                justify-content: center;
+                flex-direction: column;
+                align-items: flex-start;
 
-                height: 60px;
-
-                position: relative;
-
-                b{
-                    display: inline;
-                    margin-right: 5px;
+                .border-bottom-light{
+                    position: absolute; 
+                    height: 1px;
+                    background-color:#313231;
+                    bottom: -15px;
+                    width: 90%;
                 }
 
-                .link-circle{
-                    position: absolute;
-                    height: 40px;
-                    width: 40px;
-                    border-radius: 50%;
 
-                    background-color: #0095f6;
-                    /* background-color: #3c4f5b; */
-
-                    right: -10px;
-
-                    display: grid;
-                    place-items: center;
-
-                    svg{
-                        font-size: 1rem;
-                        fill: #e5e5e5;
-                    }
-                }
-
-            }
-
-            .shop{
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap; 
-                justify-content: space-between;
-
-                .link-2-shop{
-                    position: relative;
-                    padding-bottom: 140px;
-                    width: 50%;
-                    /* background-color: #363636; */
-                    color: #e5e5e5;
+                .left{
+                    /* width: 50%; */
+                    width: 100%;
                     
-                    border-radius: 10px;
-                    margin-bottom: 5px;
-                    margin-top: 30px;
-
-                    display: flex; 
-                    flex-direction: column;
-                    align-items: flex-start;
-
-                    .border-bottom-light{
-                        position: absolute; 
-                        height: 1px;
-                        background-color:#313231;
-                        bottom: -15px;
-                        width: 90%;
-                    }
-
-
-                    .left{
-                        /* width: 50%; */
+                    img{
                         width: 100%;
+                        border-radius: 10px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .right{
+                    /* width: 50%; */
+                    width: 100%;
+                    /* margin-left: 10px; */
+
+                    .tags{
+                        margin-top: 10px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        display: none;
                         
-                        img{
-                            width: 100%;
-                            border-radius: 10px;
+                        .tag{
+                            background-color: pink;
+                            font-size: 0.85rem;
+                            color: #333;
+                            font-weight: 600;
+                            padding: 5px 10px;
+                            border-radius: 100px;
+                            margin-right: 5px;
                             margin-bottom: 5px;
                         }
                     }
 
-                    .right{
-                        /* width: 50%; */
+                    .title{
+                        color: #e5e5e5;
+                        font-size: 0.75rem;
+                        font-weight: 600;
                         width: 100%;
-                        /* margin-left: 10px; */
+                        margin-bottom: 10px;
+                    }
 
-                        .tags{
-                            margin-top: 10px;
-                            width: 100%;
-                            display: flex;
-                            align-items: center;
-                            flex-wrap: wrap;
-                            display: none;
-                            
-                            .tag{
-                                background-color: pink;
-                                font-size: 0.85rem;
-                                color: #333;
-                                font-weight: 600;
-                                padding: 5px 10px;
-                                border-radius: 100px;
-                                margin-right: 5px;
-                                margin-bottom: 5px;
-                            }
-                        }
+                    .reviews{
+                        display: flex;
 
-                        .title{
-                            color: #e5e5e5;
-                            font-size: 0.75rem;
-                            font-weight: 600;
-                            width: 100%;
-                            margin-bottom: 10px;
-                        }
-
-                        .reviews{
-                            display: flex;
-
-                            .review-info{
-                                display: flex;
-                                align-items: flex-end;
-                                width: 100%;
-                                color: #e5e5e5;
-                                font-size: 0.7rem;
-                                margin-left: -15px;
-                                font-family: Arial, sans-serif;
-                                font-style: italic;
-                            }
-                        }
-
-                        .main-price{
-                            margin-top: 10px;
-                            display: flex;
-                            align-items: flex-start;
-
-                            color: #e5e5e5;
-                            font-size: 1.15rem;
-                            font-weight: 600;
-                            font-family: Arial, sans-serif;
-                            
-                            span{
-                                font-family: Arial, sans-serif;
-                                font-size: 0.75rem;
-                                font-weight: 300;
-                                margin-right: 3px;
-                            }
-                        }
-                        
-                        .old-price{
+                        .review-info{
                             display: flex;
                             align-items: flex-end;
                             width: 100%;
                             color: #e5e5e5;
                             font-size: 0.7rem;
+                            margin-left: -15px;
                             font-family: Arial, sans-serif;
-                            margin-top: 5px;
-                            
-
-                            .strike{
-                                text-decoration: line-through;
-                                margin-right: 5px;
-                                font-family: Arial, sans-serif;
-                            }
+                            font-style: italic;
                         }
+                    }
 
-                        .desc{
-                            color: #e5e5e5;
+                    .main-price{
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: flex-start;
+
+                        color: #e5e5e5;
+                        font-size: 1.15rem;
+                        font-weight: 600;
+                        font-family: Arial, sans-serif;
+                        
+                        span{
+                            font-family: Arial, sans-serif;
                             font-size: 0.75rem;
                             font-weight: 300;
-                            margin-top: 10px;
+                            margin-right: 3px;
+                        }
+                    }
+                    
+                    .old-price{
+                        display: flex;
+                        align-items: flex-end;
+                        width: 100%;
+                        color: #e5e5e5;
+                        font-size: 0.7rem;
+                        font-family: Arial, sans-serif;
+                        margin-top: 5px;
+                        
+
+                        .strike{
+                            text-decoration: line-through;
+                            margin-right: 5px;
+                            font-family: Arial, sans-serif;
+                        }
+                    }
+
+                    .desc{
+                        color: #e5e5e5;
+                        font-size: 0.75rem;
+                        font-weight: 300;
+                        margin-top: 10px;
+                        width: 100%;
+                    }
+
+                    .date{
+                        color: #e5e5e5;
+                        font-size: 0.65rem;
+                        font-weight: 300;
+                        margin-top: 10px;
+                        width: 100%;
+                        font-weight: 500;
+                    }
+
+                    .price{
+                        /* position: absolute;
+                        bottom: 85px;
+                        left: 0; */
+                        /* padding-left: 10px; */
+                    }
+
+                    .btns{
+                        /* position: absolute;
+                        bottom: 0;
+                        left: 0; */
+                        width: calc(100% - 7.5px);
+
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        
+                        .buy-btn{
                             width: 100%;
+                            margin-top: 5px;
+                            font-size: 0.85rem;
+                            padding: 10px 15px;
+                            background-color: #0095f6;
+                            border-radius: 10px;
+                            text-align: center;
                         }
 
-                        .date{
-                            color: #e5e5e5;
-                            font-size: 0.65rem;
-                            font-weight: 300;
-                            margin-top: 10px;
+                        .top-svgs{
                             width: 100%;
-                            font-weight: 500;
-                        }
-
-                        .price{
-                            /* position: absolute;
-                            bottom: 85px;
-                            left: 0; */
-                            /* padding-left: 10px; */
-                        }
-
-                        .btns{
-                            /* position: absolute;
-                            bottom: 0;
-                            left: 0; */
-                            width: calc(100% - 7.5px);
-
                             display: flex;
                             align-items: center;
-                            flex-wrap: wrap;
-                            
-                            .buy-btn{
-                                width: 100%;
-                                margin-top: 5px;
-                                font-size: 0.85rem;
-                                padding: 10px 15px;
-                                background-color: #0095f6;
-                                border-radius: 10px;
-                                text-align: center;
+                            justify-content: space-between;
+
+                            svg{
+                                font-size: 1.65rem;
                             }
 
-                            .top-svgs{
-                                width: 100%;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-
+                            .left-svgs{
                                 svg{
                                     font-size: 1.65rem;
-                                }
-
-                                .left-svgs{
-                                    svg{
-                                        font-size: 1.65rem;
-                                        margin-right: 10px;
-                                    }
+                                    margin-right: 10px;
                                 }
                             }
-
-                            
                         }
-                    }
-                }
-            }
 
-            .shop > :nth-child(even) {
-                border-left: 1px solid #313231;
-                padding-left: 7.5px;
-                border-radius: 0;
-                position: relative; 
-
-                .border-bottom-light{
-                    right: 0;
-                }
-
-                .right{
-                    /* position: relative;  */
-
-                    .price{
-                        position: absolute;
-                        bottom: 85px;
-                        left: 7.5px;
-                    }
-
-                    .btns{
-                        position: absolute;
-                        left: 7.5px;
-                        bottom: 0px;
-                    }
-                }
-            }
-
-            .shop > :nth-child(odd) {
-                padding-right: 7.5px;
-
-                position: relative; 
-
-                .border-bottom-light{
-                    left: 0;
-                }
-
-                .right{
-                    /* position: relative;  */
-
-                    .price{
-                        position: absolute;
-                        bottom: 85px;
-                        left: 0px;
-                    }
-
-                    .btns{
-                        position: absolute;
-                        right: 7.5px;
-                        bottom: 0px;
+                        
                     }
                 }
             }
         }
+
+        .shop > :nth-child(even) {
+            border-left: 1px solid #313231;
+            padding-left: 7.5px;
+            border-radius: 0;
+            position: relative; 
+
+            .border-bottom-light{
+                right: 0;
+            }
+
+            .right{
+                /* position: relative;  */
+
+                .price{
+                    position: absolute;
+                    bottom: 85px;
+                    left: 7.5px;
+                }
+
+                .btns{
+                    position: absolute;
+                    left: 7.5px;
+                    bottom: 0px;
+                }
+            }
+        }
+
+        .shop > :nth-child(odd) {
+            padding-right: 7.5px;
+
+            position: relative; 
+
+            .border-bottom-light{
+                left: 0;
+            }
+
+            .right{
+                /* position: relative;  */
+
+                .price{
+                    position: absolute;
+                    bottom: 85px;
+                    left: 0px;
+                }
+
+                .btns{
+                    position: absolute;
+                    right: 7.5px;
+                    bottom: 0px;
+                }
+            }
+        }
+
+        .shop-2{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: space-between;
+
+            .link-2-shop{
+                position: relative;
+                /* padding-bottom: 140px; */
+                width: calc(33.33% - 2.5px);
+                aspect-ratio: 1/1;
+                margin-bottom: 3.5px;
+                /* background-color: #363636; */
+                color: #e5e5e5;
+                
+                /* border-radius: 10px; */
+                /* margin-bottom: 1px; */
+                /* margin-top: 30px; */
+
+                display: flex; 
+                flex-direction: column;
+                align-items: flex-start;
+                overflow: hidden;
+
+                .border-bottom-light{
+                    display: none;
+                    position: absolute; 
+                    height: 1px;
+                    background-color:#313231;
+                    bottom: -15px;
+                    width: 90%;
+                }
+
+                .left{
+                    /* width: 50%; */
+                    width: 100%;
+
+                    /* margin-bottom: -2px; */
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        /* border-radius: 4px; */
+                        /* margin-bottom: 5px; */
+                    }
+                }
+
+                .right{
+                    /* width: 50%; */
+                    width: 100%;
+                    /* margin-left: 10px; */
+
+                    .tags{
+                        margin-top: 10px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        display: none;
+                        
+                        .tag{
+                            background-color: pink;
+                            font-size: 0.85rem;
+                            color: #333;
+                            font-weight: 600;
+                            padding: 5px 10px;
+                            border-radius: 100px;
+                            margin-right: 5px;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    .title{
+                        color: #e5e5e5;
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        width: 100%;
+                        margin-bottom: 10px;
+                    }
+
+                    .reviews{
+                        display: flex;
+
+                        .review-info{
+                            display: flex;
+                            align-items: flex-end;
+                            width: 100%;
+                            color: #e5e5e5;
+                            font-size: 0.7rem;
+                            margin-left: -15px;
+                            font-family: Arial, sans-serif;
+                            font-style: italic;
+                        }
+                    }
+
+                    .main-price{
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: flex-start;
+
+                        color: #e5e5e5;
+                        font-size: 1.15rem;
+                        font-weight: 600;
+                        font-family: Arial, sans-serif;
+                        
+                        span{
+                            font-family: Arial, sans-serif;
+                            font-size: 0.75rem;
+                            font-weight: 300;
+                            margin-right: 3px;
+                        }
+                    }
+                    
+                    .old-price{
+                        display: flex;
+                        align-items: flex-end;
+                        width: 100%;
+                        color: #e5e5e5;
+                        font-size: 0.7rem;
+                        font-family: Arial, sans-serif;
+                        margin-top: 5px;
+                        
+
+                        .strike{
+                            text-decoration: line-through;
+                            margin-right: 5px;
+                            font-family: Arial, sans-serif;
+                        }
+                    }
+
+                    .desc{
+                        color: #e5e5e5;
+                        font-size: 0.75rem;
+                        font-weight: 300;
+                        margin-top: 10px;
+                        width: 100%;
+                    }
+
+                    .date{
+                        color: #e5e5e5;
+                        font-size: 0.65rem;
+                        font-weight: 300;
+                        margin-top: 10px;
+                        width: 100%;
+                        font-weight: 500;
+                    }
+
+                    .price{
+                        /* position: absolute;
+                        bottom: 85px;
+                        left: 0; */
+                        /* padding-left: 10px; */
+                    }
+
+                    .btns{
+                        /* position: absolute;
+                        bottom: 0;
+                        left: 0; */
+                        width: calc(100% - 7.5px);
+
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        
+                        .buy-btn{
+                            width: 100%;
+                            margin-top: 5px;
+                            font-size: 0.85rem;
+                            padding: 10px 15px;
+                            background-color: #0095f6;
+                            border-radius: 10px;
+                            text-align: center;
+                        }
+
+                        .top-svgs{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            svg{
+                                font-size: 1.65rem;
+                            }
+
+                            .left-svgs{
+                                svg{
+                                    font-size: 1.65rem;
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+
+                        
+                    }
+                }
+            }
+        }
+    }
 
     .share-my-page{
         height: 20px;
@@ -711,7 +1055,7 @@ const RedorGreenFlag = styled.div`
         aspect-ratio: 1/1;
         border-radius: 50%;
         background-color: #363636;
-        z-index: 1000;
+        z-index: 100;
 
         display: grid;
         place-items: center;

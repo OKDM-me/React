@@ -68,3 +68,7 @@ input{
   background-color: #000000;
   border-radius: 100px;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

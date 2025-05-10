@@ -16,6 +16,7 @@ import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 import influencerdp from "../../Images/influencerdp.png"
 import influencerproduct1 from "../../Images/influencerproduct1.png"
@@ -86,59 +87,82 @@ const Influencer = () => {
     };
 
     const { img, title, date } = albumData[index];
+    
+    const [modelOpen, setModelOpen] = useState(false);
+    const mainContentRef = useRef(null);
 
     useEffect(() => {
-        // Disable scroll on mount
-        document.body.style.overflow = 'hidden';
-    
-        // Re-enable scroll on unmount
-        // return () => {
-        //   document.body.style.overflow = 'auto';
-        // };
-      }, []);
+  if (modelOpen) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
+
+  // Optional cleanup (safe)
+  return () => {
+    document.body.classList.remove('no-scroll');
+  };
+}, [modelOpen]);
 
     return (
         <Container>
-            <ModelConatiner>
-                <div className="model-closer"></div>
-                <div className="model">
-                    <div className="shop-model-items">
-                        <div className="left"><img src={influencerproduct1} alt="" /></div>
-                        <div className="right">
-                            <div className="tags">
-                                <div className="tag">Best seller</div>
-                            </div>
-                            <div className="title">
-                                White Graphic Sports Jersey Tshirt
-                            </div>
-                            <div className="brand">
-                                Brand - <b>@newme.asia</b>
-                            </div>
-                            <div className="promo">
-                                My promo code for 30% off - <b>SOMY</b> <FileCopyOutlinedIcon/>
-                            </div>
-                            {/* <div className="reviews">
-                                <StarsWrapper>
-                                    {renderStars(4.3)}
-                                </StarsWrapper>
-                                <div className="review-info">4.3 (38 Users)</div>
-                            </div> */}
-                            {/* <div className="price">
-                                <div className="main-price"><span>₹</span>669</div>
-                                <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
-                            </div> */}
-                            <div className="btns">
-                                <div className="top-svgs">
-                                        <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
-                                        <BookmarkBorderOutlinedIcon />
+            {
+                modelOpen ? 
+                <ModelConatiner>
+                    <div className="model-closer"></div>
+                    <div className="model">
+                        <div className="shop-model-items">
+                            <div className="left"><img src={influencerproduct1} alt="" /></div>
+                            <div className="right">
+                                <div className="tags">
+                                    <div className="tag">Best seller</div>
                                 </div>
-                                <a href="https://newme.asia/product/white-graphic-sports-jersey-tshirt?srsltid=AfmBOooC-e1QTAD72Bq9zdyw4nH5vDSARUP55s--_b_Qd2leAkw7J0w_" className="buy-btn">Add to Cart</a>
+                                <div className="title">
+                                    White Graphic Sports Jersey Tshirt
+                                </div>
+                                <div className="brand">
+                                    Brand - <b>@newme.asia</b>
+                                </div>
+                                <div className="promo">
+                                    My promo code for 30% off - <b>SOMY</b> <FileCopyOutlinedIcon/>
+                                </div>
+                                <div className="promo">
+                                    <i>
+                                        Avg price with my promo comes becomes around 
+                                        <div className="price-container">
+                                            <div className="main-price"><span>₹</span>1,399</div>
+                                            <div className="old-price"><div className="strike">Avg Selling Price : ₹1,999</div> (30% off)</div>
+                                        </div>
+                                    </i>
+                                </div>
+                                {/* <div className="reviews">
+                                    <StarsWrapper>
+                                        {renderStars(4.3)}
+                                    </StarsWrapper>
+                                    <div className="review-info">4.3 (38 Users)</div>
+                                </div> */}
+                                {/* <div className="price">
+                                    <div className="main-price"><span>₹</span>669</div>
+                                    <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
+                                </div> */}
+                                <div className="btns">
+                                    <div className="svg-container svg-2">
+                                        <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                    </div>
+                                    <div className="svg-container svg-2" style={{"marginLeft" : "10px"}}>
+                                        <svg aria-label="Share Post" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Share Post</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="#333" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                    </div>
+                                    <a href="https://newme.asia/product/white-graphic-sports-jersey-tshirt?srsltid=AfmBOooC-e1QTAD72Bq9zdyw4nH5vDSARUP55s--_b_Qd2leAkw7J0w_" className="buy-btn">Shop Now <CallMadeIcon/></a>
+                                    <div className="svg-container">
+                                        <BookmarkBorderOutlinedIcon />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </ModelConatiner>
-            <div className="main-content">
+                </ModelConatiner> : null
+            }
+            <div className="main-content" ref={mainContentRef}>
                 <Subscribe>
                     <NotificationsNoneOutlinedIcon />
                 </Subscribe>
@@ -260,42 +284,42 @@ const Influencer = () => {
                     </div>
 
                     <div className="shop-2">
-                        <div className="link-2-shop">
+                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
                             <div className="border-bottom-light"></div>
                             <div className="left"><img src={influencerproduct1} alt="" /></div>
                             <div className="item-name">
                                 T-shirt
                             </div>
                         </div>
-                        <div className="link-2-shop">
+                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
                             <div className="border-bottom-light"></div>
                             <div className="left"><img src={influencerproduct2} alt="" /></div>
                             <div className="item-name">
                                 Shine Lip Gloss
                             </div>
                         </div>
-                        <div className="link-2-shop">
+                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
                             <div className="border-bottom-light"></div>
                             <div className="left"><img src={influencerproduct3} alt="" /></div>
                             <div className="item-name">
                                 Watch
                             </div>
                         </div>
-                        <div className="link-2-shop">
+                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
                             <div className="border-bottom-light"></div>
                             <div className="left"><img src={influencerproduct4} alt="" /></div>
                             <div className="item-name">
                                 T-shirt
                             </div>
                         </div>
-                        <div className="link-2-shop">
+                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
                             <div className="border-bottom-light"></div>
                             <div className="left"><img src={influencerproduct5} alt="" /></div>
                             <div className="item-name">
                                 T-shirt
                             </div>
                         </div>
-                        <div className="link-2-shop">
+                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
                             <div className="border-bottom-light"></div>
                             <div className="left"><img src={influencerproduct6} alt="" /></div>
                             <div className="item-name">
@@ -759,6 +783,7 @@ const ModelConatiner = styled.div`
         width: 80%;
         /* height: 70%; */
         max-width: 400px;
+        margin-top: -50px;
 
         background-color: white;
         
@@ -863,6 +888,16 @@ const ModelConatiner = styled.div`
                         fill: #333;
                         font-size: 0.85rem;
                     }
+
+                    i{
+                        color: #333;
+                    }
+
+                    .price-container{
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                    }
                 }
 
                 .reviews{
@@ -881,14 +916,15 @@ const ModelConatiner = styled.div`
                 }
 
                 .main-price{
-                    margin-top: 10px;
+                    margin-top: 5px;
                     display: flex;
                     align-items: flex-start;
 
                     color: #333;
-                    font-size: 1.15rem;
+                    font-size: 1rem;
                     font-weight: 600;
                     font-family: Arial, sans-serif;
+                    margin-right: 7.5px;
                     
                     span{
                         color: #333;
@@ -902,7 +938,7 @@ const ModelConatiner = styled.div`
                 .old-price{
                     display: flex;
                     align-items: flex-end;
-                    width: 100%;
+                    /* width: 100%; */
                     color: #333;
                     font-size: 0.7rem;
                     font-family: Arial, sans-serif;
@@ -946,6 +982,7 @@ const ModelConatiner = styled.div`
                     /* position: absolute;
                     bottom: 0;
                     left: 0; */
+                    margin-top: 20px;
                     width: 100%;
 
                     display: flex;
@@ -953,25 +990,40 @@ const ModelConatiner = styled.div`
                     
                     .buy-btn{
                         flex: 1;
-                        margin-top: 5px;
                         font-size: 0.85rem;
                         padding: 10px 15px;
                         background-color: #0095f6;
                         border-radius: 10px;
-                        text-align: center;
                         color: white;
                         text-decoration: none;
-                    }
+                        
+                        margin: 5px 10px 0 10px;
 
-                    .top-svgs{
                         display: flex;
                         align-items: center;
-                        justify-content: space-between;
+                        justify-content: center;
+
+
+                        svg{
+                            font-size: 1rem;
+                            margin-left: 5px;
+                        }
+                    }
+
+                    .svg-container{
+                        display: flex;
+                        align-items: center;
 
                         svg{
                             font-size: 1.65rem;
                             fill: #333;
-                            margin-right: 10px;
+                        }
+
+                    }
+                    
+                    .svg-2{
+                        svg{
+                            margin-bottom: -3px;
                         }
                     }
                 }

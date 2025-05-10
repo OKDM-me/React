@@ -10,6 +10,7 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import ControlFooter from "../../Components/ControlFooter";
 import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutlined';
 import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
+import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import RoomIcon from '@material-ui/icons/Room';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 
@@ -28,68 +29,10 @@ import influencerproduct6 from "../../Images/influencerproduct6.png"
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
-import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
-
-const renderStars = (rating) => {
-    const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 >= 0.5;
-
-    for (let i = 0; i < fullStars; i++) {
-        stars.push(<FaStar key={`full-${i}`} />);
-    }
-    if (hasHalfStar) {
-        stars.push(<FaStarHalfAlt key="half" />);
-    }
-    while (stars.length < 5) {
-        stars.push(<FaRegStar key={`empty-${stars.length}`} />);
-    }
-    return stars;
-};
-
 const Influencer = () => {
-    const albumData = [
-        {
-            img: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Samsung_headquarters.jpg",
-            title: "My workspace at Samsung Town – where the magic began ✨",
-            date: "13 February, 2022"
-        },
-        {
-            img: "https://img.staticmb.com/mbcontent/images/crop/uploads/2022/10/South-City-Mall-Kolkata-View-from-the-Top-Floor_0_1200.jpg",
-            title: "Chilling at South City Mall – the weekend ritual 🛍️🍕",
-            date: "21 June, 2023"
-        },
-        {
-            img: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jadavpur_University_Gate_No._4.jpg",
-            title: "Throwback to my first day at Jadavpur University – butterflies and big dreams 🎓💭",
-            date: "28 October, 2021"
-        },
-        {
-            img: "https://i.ytimg.com/vi/cIxPS-B01Lg/maxresdefault.jpg",
-            title: "Evening walks at Bagmane Tech Park – coding and calm vibes 🌇💻",
-            date: "07 March, 2023"
-        },
-        {
-            img: "https://media.istockphoto.com/id/184316397/photo/london-corporate-buildings.jpg?s=612x612&w=0&k=20&c=yLP6jM6vY8IEOnypm3NH7WE8Wr2u-mvtdao99rB1Ez4=",
-            title: "Captured the golden hour from my hostel terrace – peace before deadlines 🌆📷",
-            date: "04 September, 2022"
-        }
-    ];
-
-    const [index, setIndex] = useState(0);
-
-    const handleLeft = () => {
-        setIndex((prevIndex) => (prevIndex - 1 + albumData.length) % albumData.length);
-    };
-
-    const handleRight = () => {
-        setIndex((prevIndex) => (prevIndex + 1) % albumData.length);
-    };
-
-    const { img, title, date } = albumData[index];
-
     const [modelOpen, setModelOpen] = useState(false);
-    const mainContentRef = useRef(null);
+    const [subscribed, setSubscribed] = useState(false);
+    const [upvoted, setUpvoted] = useState(1); // 0 - not voted, -1 green, +1 red
 
     useEffect(() => {
         if (modelOpen) {
@@ -112,7 +55,7 @@ const Influencer = () => {
                 window.history.replaceState(null, '', window.location.pathname + window.location.search);
             }
         };
-}, [modelOpen]);
+    }, [modelOpen]);
 
     return (
         <Container>
@@ -172,9 +115,20 @@ const Influencer = () => {
                         </div>
                     </ModelConatiner> : null
             }
-            <div className="main-content" ref={mainContentRef}>
+            <div className="main-content">
                 <Subscribe>
-                    <NotificationsNoneOutlinedIcon />
+                    {/*  */}
+                    {
+                        subscribed ? (
+                            <div className="subscribe-btn subscribed" onClick={() => setSubscribed(!subscribed)}>
+                                <NotificationsActiveIcon />
+                            </div>
+                        ) : (
+                            <div className="subscribe-btn" onClick={() => setSubscribed(!subscribed)}>
+                                <NotificationsNoneOutlinedIcon />
+                            </div>
+                        )
+                    }
                 </Subscribe>
                 <div className="user-data">
                     <div className="logo-x-dp">
@@ -211,13 +165,13 @@ const Influencer = () => {
                         72% votes for <b>red flag 🚩</b>
                     </div>
                     {/* <div className="vote-btn"><ArrowLeftIcon/></div> */}
-                    <div className="vote-btn"><ArrowDropUpIcon /></div>
+                    <div className={upvoted == -1 ? "vote-btn voted" : "vote-btn"}><ArrowDropUpIcon /></div>
                     <div className="box">
                         <div className="left"></div>
                         {/* Green Flag 💚  */}
                         <div className="right">Red Flag 🚩</div>
                     </div>
-                    <div className="vote-btn"><ArrowDropUpIcon /></div>
+                    <div className={upvoted == 1 ? "vote-btn voted" : "vote-btn"}><ArrowDropUpIcon /></div>
                     {/* <div className="vote-btn"><ArrowRightIcon/></div> */}
                 </RedorGreenFlag>
 
@@ -669,21 +623,33 @@ const StarsWrapper = styled.div`
 
 
 const Subscribe = styled.div`
-    position: fixed; 
-    top: 20px;
-    right: 20px;
-    height: 30px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    background-color: white;
-    z-index: 1000;
+    .subscribe-btn{
+        position: fixed; 
+        top: 20px;
+        right: 20px;
+        height: 30px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: white;
+        /* background-color: #363636; */
+        z-index: 1000;
+    
+        display: grid;
+        place-items: center;
+    
+        svg{
+            height: 1.25rem;
+            fill: black;
+        }
+    }
 
-    display: grid;
-    place-items: center;
+    .subscribed{
+        background-color: #363636;
+        /* background-color: yellowgreen; */
 
-    svg{
-        height: 1.25rem;
-        fill: black;
+        svg{
+            fill: white;
+        }
     }
 `
 
@@ -713,6 +679,17 @@ const RedorGreenFlag = styled.div`
 
         display: grid;
         place-items: center;
+
+        svg{
+            margin-top: -2px;
+            height: 2rem;
+            fill: white;
+        }
+    }
+
+    .voted{
+        background-color: #b0ae28;
+        border: 2px solid white;
 
         svg{
             height: 2rem;

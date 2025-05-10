@@ -165,16 +165,15 @@ const Influencer = () => {
                         72% votes for <b>red flag 🚩</b>
                     </div>
                     {/* <div className="vote-btn"><ArrowLeftIcon/></div> */}
-                    <div className={upvoted == -1 ? "vote-btn voted" : "vote-btn"}><ArrowDropUpIcon /></div>
+                    <div className={upvoted == -1 ? "vote-btn voted" : "vote-btn"} onClick={() => setUpvoted(upvoted == -1 ? 0 : -1)}><ArrowDropUpIcon /></div>
                     <div className="box">
                         <div className="left"></div>
                         {/* Green Flag 💚  */}
                         <div className="right">Red Flag 🚩</div>
                     </div>
-                    <div className={upvoted == 1 ? "vote-btn voted" : "vote-btn"}><ArrowDropUpIcon /></div>
+                    <div className={upvoted == 1 ? "vote-btn voted" : "vote-btn"} onClick={() => setUpvoted(upvoted == 1 ? 0 : 1)}><ArrowDropUpIcon /></div>
                     {/* <div className="vote-btn"><ArrowRightIcon/></div> */}
                 </RedorGreenFlag>
-
 
                 <div className="group">
                     <div className="group-name-container">
@@ -420,7 +419,7 @@ const Container = styled.div`
                     aspect-ratio: 1/1;
                     background-color:rgb(217, 211, 211);
                     border-radius: 50%;
-                    margin: 2.5px;
+                    margin: 3.5px;
 
                     padding: 2.5px;
 

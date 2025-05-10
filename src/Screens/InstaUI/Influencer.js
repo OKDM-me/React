@@ -87,80 +87,90 @@ const Influencer = () => {
     };
 
     const { img, title, date } = albumData[index];
-    
+
     const [modelOpen, setModelOpen] = useState(false);
     const mainContentRef = useRef(null);
 
     useEffect(() => {
-  if (modelOpen) {
-    document.body.classList.add('no-scroll');
-  } else {
-    document.body.classList.remove('no-scroll');
-  }
+        if (modelOpen) {
+            document.body.classList.add('no-scroll');
+            window.location.hash = 'm1op1';
+        } else {
+            document.body.classList.remove('no-scroll');
+            if (window.location.hash === '#m1op1') {
+                window.history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+        }
+        
+        if (window.location.hash !== '#m1op1') {
+            setModelOpen(false);
+        }
 
-  // Optional cleanup (safe)
-  return () => {
-    document.body.classList.remove('no-scroll');
-  };
+        return () => {
+            document.body.classList.remove('no-scroll');
+            if (window.location.hash === '#m1op1') {
+                window.history.replaceState(null, '', window.location.pathname + window.location.search);
+            }
+        };
 }, [modelOpen]);
 
     return (
         <Container>
             {
-                modelOpen ? 
-                <ModelConatiner>
-                    <div className="model-closer"></div>
-                    <div className="model">
-                        <div className="shop-model-items">
-                            <div className="left"><img src={influencerproduct1} alt="" /></div>
-                            <div className="right">
-                                <div className="tags">
-                                    <div className="tag">Best seller</div>
-                                </div>
-                                <div className="title">
-                                    White Graphic Sports Jersey Tshirt
-                                </div>
-                                <div className="brand">
-                                    Brand - <b>@newme.asia</b>
-                                </div>
-                                <div className="promo">
-                                    My promo code for 30% off - <b>SOMY</b> <FileCopyOutlinedIcon/>
-                                </div>
-                                <div className="promo">
-                                    <i>
-                                        Avg price with my promo comes becomes around 
-                                        <div className="price-container">
-                                            <div className="main-price"><span>₹</span>1,399</div>
-                                            <div className="old-price"><div className="strike">Avg Selling Price : ₹1,999</div> (30% off)</div>
-                                        </div>
-                                    </i>
-                                </div>
-                                {/* <div className="reviews">
+                modelOpen ?
+                    <ModelConatiner>
+                        <div className="model-closer" onClick={() => setModelOpen(false)}></div>
+                        <div className="model">
+                            <div className="shop-model-items">
+                                <div className="left"><img src={influencerproduct1} alt="" /></div>
+                                <div className="right">
+                                    <div className="tags">
+                                        <div className="tag">Best seller</div>
+                                    </div>
+                                    <div className="title">
+                                        White Graphic Sports Jersey Tshirt
+                                    </div>
+                                    <div className="brand">
+                                        Brand - <b>@newme.asia</b>
+                                    </div>
+                                    <div className="promo">
+                                        My promo code for 30% off - <b>SOMY</b> <FileCopyOutlinedIcon />
+                                    </div>
+                                    <div className="promo">
+                                        <i>
+                                            Avg price with my promo comes becomes around
+                                            <div className="price-container">
+                                                <div className="main-price"><span>₹</span>1,399</div>
+                                                <div className="old-price"><div className="strike">Avg Selling Price : ₹1,999</div> (30% off)</div>
+                                            </div>
+                                        </i>
+                                    </div>
+                                    {/* <div className="reviews">
                                     <StarsWrapper>
                                         {renderStars(4.3)}
                                     </StarsWrapper>
                                     <div className="review-info">4.3 (38 Users)</div>
                                 </div> */}
-                                {/* <div className="price">
+                                    {/* <div className="price">
                                     <div className="main-price"><span>₹</span>669</div>
                                     <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
                                 </div> */}
-                                <div className="btns">
-                                    <div className="svg-container svg-2">
-                                        <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
-                                    </div>
-                                    <div className="svg-container svg-2" style={{"marginLeft" : "10px"}}>
-                                        <svg aria-label="Share Post" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Share Post</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="#333" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                                    </div>
-                                    <a href="https://newme.asia/product/white-graphic-sports-jersey-tshirt?srsltid=AfmBOooC-e1QTAD72Bq9zdyw4nH5vDSARUP55s--_b_Qd2leAkw7J0w_" className="buy-btn">Shop Now <CallMadeIcon/></a>
-                                    <div className="svg-container">
-                                        <BookmarkBorderOutlinedIcon />
+                                    <div className="btns">
+                                        <div className="svg-container svg-2">
+                                            <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        </div>
+                                        <div className="svg-container svg-2" style={{ "marginLeft": "10px" }}>
+                                            <svg aria-label="Share Post" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Share Post</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="#333" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                                        </div>
+                                        <a href="https://newme.asia/product/white-graphic-sports-jersey-tshirt?srsltid=AfmBOooC-e1QTAD72Bq9zdyw4nH5vDSARUP55s--_b_Qd2leAkw7J0w_" className="buy-btn">Shop Now <CallMadeIcon /></a>
+                                        <div className="svg-container">
+                                            <BookmarkBorderOutlinedIcon />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </ModelConatiner> : null
+                    </ModelConatiner> : null
             }
             <div className="main-content" ref={mainContentRef}>
                 <Subscribe>

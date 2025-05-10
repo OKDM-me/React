@@ -11,6 +11,7 @@ import ControlFooter from "../../Components/ControlFooter";
 import BookmarkBorderOutlinedIcon from '@material-ui/icons/BookmarkBorderOutlined';
 import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneOutlined';
 import RoomIcon from '@material-ui/icons/Room';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
@@ -86,8 +87,57 @@ const Influencer = () => {
 
     const { img, title, date } = albumData[index];
 
+    useEffect(() => {
+        // Disable scroll on mount
+        document.body.style.overflow = 'hidden';
+    
+        // Re-enable scroll on unmount
+        // return () => {
+        //   document.body.style.overflow = 'auto';
+        // };
+      }, []);
+
     return (
         <Container>
+            <ModelConatiner>
+                <div className="model-closer"></div>
+                <div className="model">
+                    <div className="shop-model-items">
+                        <div className="left"><img src={influencerproduct1} alt="" /></div>
+                        <div className="right">
+                            <div className="tags">
+                                <div className="tag">Best seller</div>
+                            </div>
+                            <div className="title">
+                                White Graphic Sports Jersey Tshirt
+                            </div>
+                            <div className="brand">
+                                Brand - <b>@newme.asia</b>
+                            </div>
+                            <div className="promo">
+                                My promo code for 30% off - <b>SOMY</b> <FileCopyOutlinedIcon/>
+                            </div>
+                            {/* <div className="reviews">
+                                <StarsWrapper>
+                                    {renderStars(4.3)}
+                                </StarsWrapper>
+                                <div className="review-info">4.3 (38 Users)</div>
+                            </div> */}
+                            {/* <div className="price">
+                                <div className="main-price"><span>₹</span>669</div>
+                                <div className="old-price"><div className="strike">M.R.P  : ₹3,396</div> (80% off)</div>
+                            </div> */}
+                            <div className="btns">
+                                <div className="top-svgs">
+                                        <svg aria-label="Reels" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Reels</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="2.049" x2="21.95" y1="7.002" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="13.504" x2="16.362" y1="2.001" y2="7.002"></line><line fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="7.207" x2="10.002" y1="2.11" y2="7.002"></line><path d="M2 12.001v3.449c0 2.849.698 4.006 1.606 4.945.94.908 2.098 1.607 4.946 1.607h6.896c2.848 0 4.006-.699 4.946-1.607.908-.939 1.606-2.096 1.606-4.945V8.552c0-2.848-.698-4.006-1.606-4.945C19.454 2.699 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.546 2 5.704 2 8.552Z" fill="none" stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M9.763 17.664a.908.908 0 0 1-.454-.787V11.63a.909.909 0 0 1 1.364-.788l4.545 2.624a.909.909 0 0 1 0 1.575l-4.545 2.624a.91.91 0 0 1-.91 0Z" fill-rule="evenodd"></path></svg>
+                                        <BookmarkBorderOutlinedIcon />
+                                </div>
+                                <a href="https://newme.asia/product/white-graphic-sports-jersey-tshirt?srsltid=AfmBOooC-e1QTAD72Bq9zdyw4nH5vDSARUP55s--_b_Qd2leAkw7J0w_" className="buy-btn">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ModelConatiner>
             <div className="main-content">
                 <Subscribe>
                     <NotificationsNoneOutlinedIcon />
@@ -675,6 +725,257 @@ const RedorGreenFlag = styled.div`
             background-color: #e94747;
             overflow: hidden;
             padding: 5px;
+        }
+    }
+`
+
+const ModelConatiner = styled.div`
+    width: 100vw;
+    height: calc(100vh - 60px);
+
+    
+    z-index: 1002;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .model-closer{
+        width: 100vw;
+        height: calc(100vh - 60px);
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+        background-color: #00000085; 
+    }
+
+    .model{ 
+        width: 80%;
+        /* height: 70%; */
+        max-width: 400px;
+
+        background-color: white;
+        
+        z-index: 1009;
+
+        padding: 20px;
+
+        .shop-model-items{
+            position: relative;
+            width: 100%;
+            /* background-color: #363636; */
+            color: #e5e5e5;
+            
+            border-radius: 10px;
+
+            display: flex; 
+            flex-direction: column;
+            align-items: flex-start;
+
+            .border-bottom-light{
+                position: absolute; 
+                height: 1px;
+                background-color:#313231;
+                bottom: -15px;
+                width: 90%;
+            }
+
+
+            .left{
+                /* width: 50%; */
+                width: 100%;
+                
+                img{
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .right{
+                /* width: 50%; */
+                width: 100%;
+                /* margin-left: 10px; */
+
+                .tags{
+                    margin-top: 10px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    display: none;
+                    
+                    .tag{
+                        background-color: pink;
+                        font-size: 0.85rem;
+                        color: #333;
+                        font-weight: 600;
+                        padding: 5px 10px;
+                        border-radius: 100px;
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .title{
+                    color: #333;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                .brand{
+                    color: #333;
+                    font-size: 0.75rem;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    
+                    b{
+                        color: #333;
+                        font-weight: 600;
+                        color: cornflowerblue;
+                    }
+                }
+
+                .promo{
+                    display: flex;
+                    align-items: center;
+
+                    color: #333;
+                    font-size: 0.75rem;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    
+                    b{
+                        color: #333;
+                        font-weight: 600;
+                        color: cornflowerblue;
+                        margin-right: 5px;
+                    }
+
+                    svg{
+                        fill: #333;
+                        font-size: 0.85rem;
+                    }
+                }
+
+                .reviews{
+                    display: flex;
+
+                    .review-info{
+                        display: flex;
+                        align-items: flex-end;
+                        width: 100%;
+                        color: #333;
+                        font-size: 0.7rem;
+                        margin-left: -15px;
+                        font-family: Arial, sans-serif;
+                        font-style: italic;
+                    }
+                }
+
+                .main-price{
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: flex-start;
+
+                    color: #333;
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    font-family: Arial, sans-serif;
+                    
+                    span{
+                        color: #333;
+                        font-family: Arial, sans-serif;
+                        font-size: 0.75rem;
+                        font-weight: 300;
+                        margin-right: 3px;
+                    }
+                }
+                
+                .old-price{
+                    display: flex;
+                    align-items: flex-end;
+                    width: 100%;
+                    color: #333;
+                    font-size: 0.7rem;
+                    font-family: Arial, sans-serif;
+                    margin-top: 5px;
+                    
+
+                    .strike{
+                        color: #333;
+                        text-decoration: line-through;
+                        margin-right: 5px;
+                        font-family: Arial, sans-serif;
+                    }
+                }
+
+                .desc{
+                    color: #333;
+                    font-size: 0.75rem;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                .date{
+                    color: #333;
+                    font-size: 0.65rem;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    width: 100%;
+                    font-weight: 500;
+                }
+
+                .price{
+                    color: #333;
+                    /* position: absolute;
+                    bottom: 85px;
+                    left: 0; */
+                    /* padding-left: 10px; */
+                }
+
+                .btns{
+                    /* position: absolute;
+                    bottom: 0;
+                    left: 0; */
+                    width: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    
+                    .buy-btn{
+                        flex: 1;
+                        margin-top: 5px;
+                        font-size: 0.85rem;
+                        padding: 10px 15px;
+                        background-color: #0095f6;
+                        border-radius: 10px;
+                        text-align: center;
+                        color: white;
+                        text-decoration: none;
+                    }
+
+                    .top-svgs{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        svg{
+                            font-size: 1.65rem;
+                            fill: #333;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
         }
     }
 `

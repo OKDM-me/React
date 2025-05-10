@@ -57,7 +57,7 @@ const Container = styled.div`
     bottom: 0;
     left: 0;
 
-    z-index: 100;
+    z-index: 1010;
 
     width: 100vw;
 

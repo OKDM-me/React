@@ -9,7 +9,7 @@ const BackControl = () => {
   const navigate = useNavigate();
   
   return (
-    <Container onClick={() => navigate("/")}>
+    <Container onClick={() => navigate("/influencer")}>
         <ArrowBackIcon />
         <img src={influencerdp} alt="" />
         @somyakodan_

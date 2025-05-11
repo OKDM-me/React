@@ -60,7 +60,6 @@ const Influencer = () => {
         }
     }, [notificationModelOpen]);
 
-
     useEffect(() => {
         if (modelOpen) {
             document.body.classList.add('no-scroll');
@@ -101,6 +100,9 @@ const Influencer = () => {
     };
 
     const handleSubscription = () => {
+        setSavedProduct(false);
+        // setNotificationModelOpen(false);
+
         if(subscribed == false){
             setSubscribed(!subscribed);
             setNotificationText("Now you will be notified by Somya's content!");

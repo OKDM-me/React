@@ -22,7 +22,7 @@ const Form = () => {
             <div className="main-content">
                 <BackControl />
                 <div className="title">Collab with me 🥹</div>
-                <div className="desc">Looking to team up? Fill out this quick form to collaborate on content, promotions, or projects. I review each request personally and will reach out if we vibe 💌</div>
+                <div className="desc">Looking to team up? Fill out this quick form to collaborate on content, promotions, or projects. I review each request personally and will reach out at your email if we vibe 💌</div>
                 
                 <div className="input-container">
                     <div className="label">Your Name</div>
@@ -31,7 +31,7 @@ const Form = () => {
 
                 <div className="input-container">
                     <div className="label">Email Address</div>
-                    <input className="input-basic" type="email" placeholder="example@brand.com" />
+                    <input className="input-basic" type="email" placeholder="example@gmail.com" />
                 </div>
 
                 <div className="input-container">
@@ -41,22 +41,26 @@ const Form = () => {
 
                 <div className="input-container">
                     <div className="label">Brand or Company Name</div>
-                    <input className="input-basic" placeholder="Enter your brand name" />
+                    <input className="input-basic" placeholder="Enter your brand name/Influencer name" />
                 </div>
 
                 <div className="input-container">
                     <div className="label">Website (optional)</div>
-                    <input className="input-basic" placeholder="https://yourbrand.com" />
+                    <input className="input-basic" placeholder="Give your website link" />
                 </div>
 
                 <div className="input-container">
-                    <div className="label">Campaign Budget</div>
+                    <div className="label">Your Approx. Budget for This Campaign</div>
                     <input className="input-basic" type="text" placeholder="Mention your budget range" />
                 </div>
 
                 <div className="input-container">
                     <div className="label">Collab Details</div>
                     <textarea className="input-basic" placeholder="Tell me more about your idea or campaign..." rows={4} />
+                </div>
+
+                <div className="main-btns">
+                    <div className="btn-1 trans">Send</div>
                 </div>
             </div>
             <ControlFooter />
@@ -137,24 +141,66 @@ const Container = styled.div`
         .input-container{
             width: 100%;
             margin-top: 30px;
-
+            border-bottom: 1px solid #313231ba;
+            padding-bottom: 20px;
             /* background-color: orang e; */
 
             .label{
                 font-size: 0.75rem;
+                font-weight: 500;
             }
 
             .input-basic{
                 width: 100%;
                 border-radius: 10px;
                 margin: 15px 0 5px 0;
-                outline: none;
+                /* outline: none; */
                 /* background-color: transparent; */
                 background-color:rgb(22, 22, 22);
                 border: 1px solid #363636;
                 padding: 15px;
                 color: white;
                 resize: none;
+                font-size: 0.75rem;
+                font-weight: 300;
+                /* letter-spacing: 0.1rem; */
+                /* outline: white; */
+            }
+            
+            .input-basic:focus {
+                outline: 1px solid white;
+                outline-offset: 2px; 
+                letter-spacing: 0.1rem;
+                transition: outline 125ms ease, letter-spacing 125ms ease;
+            }
+
+            textarea{
+                height: 200px;
+            }
+        }
+
+        .main-btns{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+
+            .btn-1{
+                width: 100%;
+                font-size: 0.85rem;
+                padding: 10px 15px;
+                background-color: #0095f6;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .secondary{
+                background-color: #363636;
+            }
+
+            .trans{
+                /* background-color: transparent; */
+                border: 1px solid rgb(119, 118, 118);
             }
         }
     }

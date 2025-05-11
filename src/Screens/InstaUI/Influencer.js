@@ -18,6 +18,7 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import CheckIcon from '@material-ui/icons/Check';
 
 import influencerdp from "../../Images/influencerdp.png"
 import influencerproduct1 from "../../Images/influencerproduct1.png"
@@ -32,9 +33,31 @@ import { CircularProgress } from "@material-ui/core";
 
 const Influencer = () => {
     const [modelOpen, setModelOpen] = useState(false);
-    const [notificationModelOpen, setNotificationModelOpen] = useState(true);
+    const [notificationModelOpen, setNotificationModelOpen] = useState(false);
     const [subscribed, setSubscribed] = useState(false);
-    const [upvoted, setUpvoted] = useState(1); // 0 - not voted, -1 green, +1 red
+    const [upvoted, setUpvoted] = useState(0); // 0 - not voted, -1 green, +1 red
+    const [showDone, setShowDone] = useState(false);
+    const [exitAnimation, setExitAnimation] = useState(false);
+    const [notificationText, setNotificationText] = useState("");
+
+    useEffect(() => {
+        if (notificationModelOpen) {
+            setTimeout(() => {
+                setShowDone(true);
+            }, 1500);
+
+            setTimeout(() => {
+                setExitAnimation(true); // trigger slide down
+            }, 3300); // little before hide to give time for animation
+
+            setTimeout(() => {
+                setNotificationModelOpen(false);
+                setShowDone(false);
+                setExitAnimation(false); // reset
+            }, 3800);
+        }
+    }, [notificationModelOpen]);
+
 
     useEffect(() => {
         if (modelOpen) {
@@ -46,7 +69,7 @@ const Influencer = () => {
                 window.history.replaceState(null, '', window.location.pathname + window.location.search);
             }
         }
-        
+
         if (window.location.hash !== '#m1op1') {
             setModelOpen(false);
         }
@@ -58,6 +81,34 @@ const Influencer = () => {
             }
         };
     }, [modelOpen]);
+
+    const handleVote = (newValue) => {
+        setNotificationModelOpen(false);
+        setUpvoted(newValue);
+
+        if (newValue === -1) {
+            setNotificationText("You voted Somya as a green flag!");
+        } else if (newValue === 1) {
+            setNotificationText("You voted Somya as a red flag!");
+        } else {
+            setNotificationText("Your vote has been removed!");
+        }
+
+        setNotificationModelOpen(true);
+    };
+
+    const handleSubscription = () => {
+        if(subscribed == false){
+            setSubscribed(!subscribed);
+            setNotificationText("Now you will be notified by Somya's content!");
+        }
+        else {
+            setSubscribed(!subscribed);
+            setNotificationText("You unsubsribed to Somya!");
+        }
+        
+        setNotificationModelOpen(true);
+    }
 
     return (
         <Container>
@@ -119,13 +170,21 @@ const Influencer = () => {
             }
             {
                 notificationModelOpen ?
-                    <NotificationModelConatiner>
+                    <NotificationModelConatiner exit={exitAnimation}>
                         <div className="modal">
-                            <div className="icon">
-                                <CircularProgress />
+                            <div className="left">
+                                <div className="loading" style={{ display: showDone ? "none" : "block" }}>
+                                    <CircularProgress />
+                                </div>
+                                <div className="done" style={{ display: showDone ? "block" : "none" }}>
+                                    <CheckIcon />
+                                </div>
+                                <div className="text">
+                                    {notificationText}
+                                </div>
                             </div>
-                            <div className="text">
-                                You voted for user being a red flag!
+                            <div className="right" onClick={() => setNotificationModelOpen(false)}>
+                                Ok
                             </div>
                         </div>
                     </NotificationModelConatiner> : null
@@ -135,11 +194,11 @@ const Influencer = () => {
                     {/*  */}
                     {
                         subscribed ? (
-                            <div className="subscribe-btn subscribed" onClick={() => setSubscribed(!subscribed)}>
+                            <div className="subscribe-btn subscribed" onClick={() => handleSubscription()}>
                                 <NotificationsActiveIcon />
                             </div>
                         ) : (
-                            <div className="subscribe-btn" onClick={() => setSubscribed(!subscribed)}>
+                            <div className="subscribe-btn" onClick={() => handleSubscription()}>
                                 <NotificationsNoneOutlinedIcon />
                             </div>
                         )
@@ -179,15 +238,21 @@ const Influencer = () => {
                     <div className="info">
                         72% votes for <b>red flag 🚩</b>
                     </div>
-                    {/* <div className="vote-btn"><ArrowLeftIcon/></div> */}
-                    <div className={upvoted == -1 ? "vote-btn voted" : "vote-btn"} onClick={() => setUpvoted(upvoted == -1 ? 0 : -1)}><ArrowDropUpIcon /></div>
+
+                    <div className={upvoted === -1 ? "vote-btn voted" : "vote-btn"}
+                        onClick={() => handleVote(upvoted === -1 ? 0 : -1)}>
+                        <ArrowDropUpIcon />
+                    </div>
+
                     <div className="box">
-                        <div className="left"></div>
-                        {/* Green Flag 💚  */}
+                        <div className="left">💚</div>
                         <div className="right">Red Flag 🚩</div>
                     </div>
-                    <div className={upvoted == 1 ? "vote-btn voted" : "vote-btn"} onClick={() => setUpvoted(upvoted == 1 ? 0 : 1)}><ArrowDropUpIcon /></div>
-                    {/* <div className="vote-btn"><ArrowRightIcon/></div> */}
+
+                    <div className={upvoted === 1 ? "vote-btn voted" : "vote-btn"}
+                        onClick={() => handleVote(upvoted === 1 ? 0 : 1)}>
+                        <ArrowDropUpIcon />
+                    </div>
                 </RedorGreenFlag>
 
                 <div className="group">
@@ -1034,37 +1099,55 @@ const ModelConatiner = styled.div`
 `
 
 const NotificationModelConatiner = styled.div`
-    position: fixed;
-    bottom: 80px;
-    width: 100vw;
-    
-    
+  position: fixed;
+  bottom: 80px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: ${(props) => (props.exit ? 'translateY(100%)' : 'translateY(0)')};
+  opacity: ${(props) => (props.exit ? 0 : 1)};
+
+  .modal {
+    width: calc(100% - 40px);
+    height: 56px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    z-index: 1002;
-    
-    .modal{
-        width: calc(100% - 40px);
-        height: 56px;
+    justify-content: space-between;
+    background-color: #2e3035f0;
+    border: 1px solid #333;
+    border-radius: 17.5px;
+    padding: 0 20px 0 10px;
 
-        display: flex;
-        align-items: center;
-        /* justify-content: center; */
-        
-        background-color: #2e3035f0;
-        border: 1px solid #333;
-        border-radius: 17.5px;
+    .left {
+      display: flex;
+      align-items: center;
 
-        padding: 0 10px;
-
-        svg{
-            scale: 0.45;
-            margin-bottom: -5px;
+      .loading {
+        svg {
+          scale: 0.45;
+          margin-bottom: -5px;
         }
+      }
 
-        .text{
-            font-size: 0.75rem;
+      .done {
+        svg {
+          font-size: 1.35rem;
+          margin-right: 5px;
         }
+      }
+
+      .text {
+        font-size: 0.75rem;
+      }
     }
-`
+
+    .right {
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  }
+`;

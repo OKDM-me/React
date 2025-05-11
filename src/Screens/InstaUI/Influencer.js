@@ -13,6 +13,7 @@ import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneO
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import RoomIcon from '@material-ui/icons/Room';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
 
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
@@ -39,6 +40,7 @@ const Influencer = () => {
     const [showDone, setShowDone] = useState(false);
     const [exitAnimation, setExitAnimation] = useState(false);
     const [notificationText, setNotificationText] = useState("");
+    const [savedProduct, setSavedProduct] = useState(false);
 
     useEffect(() => {
         if (notificationModelOpen) {
@@ -83,6 +85,7 @@ const Influencer = () => {
     }, [modelOpen]);
 
     const handleVote = (newValue) => {
+        setSavedProduct(false);
         setNotificationModelOpen(false);
         setUpvoted(newValue);
 
@@ -108,6 +111,19 @@ const Influencer = () => {
         }
         
         setNotificationModelOpen(true);
+    }
+
+    const handleSave = () => {
+        if(savedProduct) {
+            setSavedProduct(!savedProduct);
+            setNotificationText("Removed from Saved");
+            setNotificationModelOpen(true);
+        }
+        else {
+            setSavedProduct(!savedProduct);
+            setNotificationText("Saved to Bookmarked Products");
+            setNotificationModelOpen(true);
+        }
     }
 
     return (
@@ -159,8 +175,10 @@ const Influencer = () => {
                                             <svg aria-label="Share Post" class="x1lliihq x1n2onr6 x5n08af" fill="#333" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Share Post</title><line fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="#333" stroke-linejoin="round" stroke-width="2"></polygon></svg>
                                         </div>
                                         <a href="https://newme.asia/product/white-graphic-sports-jersey-tshirt?srsltid=AfmBOooC-e1QTAD72Bq9zdyw4nH5vDSARUP55s--_b_Qd2leAkw7J0w_" className="buy-btn">Shop Now <CallMadeIcon /></a>
-                                        <div className="svg-container">
-                                            <BookmarkBorderOutlinedIcon />
+                                        <div className="svg-container" onClick={() => handleSave()}>
+                                            {
+                                                savedProduct ? <BookmarkIcon /> : <BookmarkBorderOutlinedIcon />
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -184,7 +202,9 @@ const Influencer = () => {
                                 </div>
                             </div>
                             <div className="right" onClick={() => setNotificationModelOpen(false)}>
-                                Ok
+                                {
+                                    savedProduct ? "View" : "Ok"
+                                }
                             </div>
                         </div>
                     </NotificationModelConatiner> : null
@@ -236,7 +256,7 @@ const Influencer = () => {
 
                 <RedorGreenFlag>
                     <div className="info">
-                        72% votes for <b>red flag 🚩</b>
+                        72% votes for <b>red flag 🚩</b> as a person
                     </div>
 
                     <div className={upvoted === -1 ? "vote-btn voted" : "vote-btn"}
@@ -747,6 +767,7 @@ const RedorGreenFlag = styled.div`
         font-size: 0.65rem;
         color: white;
         left: 50px;
+        font-style: italic;
     }
 
     .vote-btn{

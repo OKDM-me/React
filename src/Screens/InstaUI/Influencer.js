@@ -28,9 +28,11 @@ import influencerproduct5 from "../../Images/influencerproduct5.png"
 import influencerproduct6 from "../../Images/influencerproduct6.png"
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import { CircularProgress } from "@material-ui/core";
 
 const Influencer = () => {
     const [modelOpen, setModelOpen] = useState(false);
+    const [notificationModelOpen, setNotificationModelOpen] = useState(true);
     const [subscribed, setSubscribed] = useState(false);
     const [upvoted, setUpvoted] = useState(1); // 0 - not voted, -1 green, +1 red
 
@@ -114,6 +116,19 @@ const Influencer = () => {
                             </div>
                         </div>
                     </ModelConatiner> : null
+            }
+            {
+                notificationModelOpen ?
+                    <NotificationModelConatiner>
+                        <div className="modal">
+                            <div className="icon">
+                                <CircularProgress />
+                            </div>
+                            <div className="text">
+                                You voted for user being a red flag!
+                            </div>
+                        </div>
+                    </NotificationModelConatiner> : null
             }
             <div className="main-content">
                 <Subscribe>
@@ -1014,6 +1029,42 @@ const ModelConatiner = styled.div`
                     }
                 }
             }
+        }
+    }
+`
+
+const NotificationModelConatiner = styled.div`
+    position: fixed;
+    bottom: 80px;
+    width: 100vw;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1002;
+    
+    .modal{
+        width: calc(100% - 40px);
+        height: 56px;
+
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        
+        background-color: #2e3035f0;
+        border: 1px solid #333;
+        border-radius: 17.5px;
+
+        padding: 0 10px;
+
+        svg{
+            scale: 0.45;
+            margin-bottom: -5px;
+        }
+
+        .text{
+            font-size: 0.75rem;
         }
     }
 `

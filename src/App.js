@@ -19,6 +19,7 @@ import BrandProfile from "./Screens/InstaUI/BrandProfile";
 import Shop from "./Screens/InstaUI/Shop";
 import Influencer from "./Screens/InstaUI/Influencer";
 import Form from "./Screens/InstaUI/Form";
+import NewShop from "./Screens/InstaUI/NewShop";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/brand" element={<BrandProfile />} />
         <Route path="/influencer" element={<Influencer />} />
         <Route path="/influencer/form" element={<Form />} />
+        <Route path="/influencer/shop" element={<NewShop />} />
         
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/user/getreplies" element={<GetReplies />} />

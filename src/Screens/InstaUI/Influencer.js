@@ -394,7 +394,7 @@ const Influencer = () => {
                     </div>
 
                     <div className="view-all-btn">
-                        <div className="btn-3">View all promotions</div>
+                        <a href="/influencer/shop" className="btn-3">View all promotions</a>
                     </div>
                 </div>
 
@@ -695,6 +695,7 @@ const Container = styled.div`
                 color: white;
                 border-radius: 100px;
                 background-color: #363636;
+                text-decoration: none;
                 font-weight: 500;
             }
         }

@@ -22,7 +22,7 @@ const Form = () => {
             <div className="main-content">
                 <BackControl />
                 <div className="title">Collab with me 🥹</div>
-                <div className="desc">Looking to team up? Fill out this quick form to collaborate on content, promotions, or projects. I review each request personally and will reach out at your email if we vibe 💌</div>
+                <div className="desc">Looking to team up? Fill out this quick form to collaborate on content, promotions, or projects. I review each request personally and will reach out to your email if we vibe 💌</div>
                 
                 <div className="input-container">
                     <div className="label">Your Name</div>

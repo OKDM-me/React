@@ -331,12 +331,12 @@ const Influencer = () => {
                             <CallMadeIcon />
                         </div>
                     </div>
-                    <div className="link1">
+                    <a href="/influencer/form" className="link1">
                         <div>Collab with me 🥹</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div className="group">
@@ -559,6 +559,7 @@ const Container = styled.div`
         }
 
         .link1{
+            text-decoration: none;
             background-color: #363636;
             font-size: 0.75rem;
             font-weight: 500;
@@ -1155,6 +1156,7 @@ const NotificationModelConatiner = styled.div`
       }
 
       .done {
+        margin-left: 10px;
         svg {
           font-size: 1.35rem;
           margin-right: 5px;

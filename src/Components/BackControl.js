@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { useNavigate } from "react-router-dom";
+import influencerdp from "../Images/influencerdp.png"
 
 const BackControl = () => {
   const navigate = useNavigate();
@@ -10,7 +11,8 @@ const BackControl = () => {
   return (
     <Container onClick={() => navigate("/")}>
         <ArrowBackIcon />
-        @nayakpenguin
+        <img src={influencerdp} alt="" />
+        @somyakodan_
     </Container>
   )
 }
@@ -46,4 +48,11 @@ const Container = styled.div`
     margin-bottom: 10px;
 
     background-color: black;
+
+    img{
+      height: 60%;
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+      margin-right: 10px;
+    }
 `

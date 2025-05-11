@@ -20,28 +20,43 @@ const Form = () => {
     return (
         <Container>
             <div className="main-content">
-                <BackControl/>
-                <div className="question">What are your honest thoughts on my Instagram profile?</div>
-                <div className="desc">I'm trying to improve my personal brand. Feel free to give feedback on the vibe, content, or overall look. Be honest!</div>
-                <textarea
-                    className="ans-input"
-                    placeholder="Write your anonymous reply here..."
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                />
-                <div className="main-btns">
-                    <div className="btn-1 trans">Send</div>
+                <BackControl />
+                <div className="title">Collab with me 🥹</div>
+                <div className="desc">Looking to team up? Fill out this quick form to collaborate on content, promotions, or projects. I review each request personally and will reach out if we vibe 💌</div>
+                
+                <div className="input-container">
+                    <div className="label">Your Name</div>
+                    <input className="input-basic" placeholder="Enter your full name" />
                 </div>
 
-                <div className="extra-btns">
-                    <SmsOutlinedIcon className="fadeicon"/>
-                    <div className="svg-frd">
-                        <svg aria-label="Share" class="x1lliihq x1n2onr6 xyb1xck" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Share</title><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
-                    </div>
+                <div className="input-container">
+                    <div className="label">Email Address</div>
+                    <input className="input-basic" type="email" placeholder="example@brand.com" />
                 </div>
 
-                <div className="comment-info">
-                    *The page owner has chosen to keep comments private.
+                <div className="input-container">
+                    <div className="label">Instagram Handle</div>
+                    <input className="input-basic" placeholder="@yourhandle" />
+                </div>
+
+                <div className="input-container">
+                    <div className="label">Brand or Company Name</div>
+                    <input className="input-basic" placeholder="Enter your brand name" />
+                </div>
+
+                <div className="input-container">
+                    <div className="label">Website (optional)</div>
+                    <input className="input-basic" placeholder="https://yourbrand.com" />
+                </div>
+
+                <div className="input-container">
+                    <div className="label">Campaign Budget</div>
+                    <input className="input-basic" type="text" placeholder="Mention your budget range" />
+                </div>
+
+                <div className="input-container">
+                    <div className="label">Collab Details</div>
+                    <textarea className="input-basic" placeholder="Tell me more about your idea or campaign..." rows={4} />
                 </div>
             </div>
             <ControlFooter />
@@ -107,7 +122,7 @@ const Container = styled.div`
             background-color: black;
         }
         
-        .question{
+        .title{
             font-size: 1.25rem;
             margin-top: 20px;
             font-weight: 500;
@@ -119,73 +134,28 @@ const Container = styled.div`
             font-size: 0.85rem;
         }
 
-        .ans-input{
+        .input-container{
             width: 100%;
-            border-radius: 10px;
-            height: 200px;
-            margin: 20px 0 -5px 0;
-            outline: none;
-            /* background-color: transparent; */
-            background-color:rgb(22, 22, 22);
-            border: 1px solid #363636;
-            border-bottom: none;
-            padding: 20px;
-            color: white;
-            resize: none;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+            margin-top: 30px;
 
-        .main-btns{
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            /* background-color: orang e; */
 
-            .btn-1{
+            .label{
+                font-size: 0.75rem;
+            }
+
+            .input-basic{
                 width: 100%;
-                font-size: 0.85rem;
-                padding: 10px 15px;
-                background-color: #0095f6;
                 border-radius: 10px;
-                text-align: center;
-                border-top-right-radius: 0;
-                border-top-left-radius: 0;
+                margin: 15px 0 5px 0;
+                outline: none;
+                /* background-color: transparent; */
+                background-color:rgb(22, 22, 22);
+                border: 1px solid #363636;
+                padding: 15px;
+                color: white;
+                resize: none;
             }
-
-            .secondary{
-                background-color: #363636;
-            }
-
-            .trans{
-                background-color: transparent;
-                border: 1px solid rgb(119, 118, 118);
-            }
-        }
-
-        .extra-btns{
-            padding: 20px 0;
-            display: flex;
-            align-items: center;
-
-            svg{
-                margin-right: 15px;
-                /* fill: grey; */
-                font-size: 1.75rem;
-            }
-
-            .fadeicon{
-                fill: grey;
-            }
-
-            .svg-frd{
-                margin-bottom: -5px;
-            }
-        }
-
-        .comment-info{
-            font-size: 0.75rem;
-            font-weight: 200;
-            font-style: italic;
         }
     }
 

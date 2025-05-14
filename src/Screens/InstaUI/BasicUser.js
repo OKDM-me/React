@@ -20,6 +20,7 @@ import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import CheckIcon from '@material-ui/icons/Check';
+import FlagIcon from '@material-ui/icons/Flag';
 
 import basicUserDp from "../../Images/basicUserDp.png"
 import influencerproduct1 from "../../Images/influencerproduct1.png"
@@ -103,7 +104,7 @@ const BasicUser = () => {
         setSavedProduct(false);
         // setNotificationModelOpen(false);
 
-        if(subscribed == false){
+        if (subscribed == false) {
             setSubscribed(!subscribed);
             setNotificationText("Now you will be notified by Somya's content!");
         }
@@ -111,12 +112,12 @@ const BasicUser = () => {
             setSubscribed(!subscribed);
             setNotificationText("You unsubsribed to Somya!");
         }
-        
+
         setNotificationModelOpen(true);
     }
 
     const handleSave = () => {
-        if(savedProduct) {
+        if (savedProduct) {
             setSavedProduct(!savedProduct);
             setNotificationText("Removed from Saved");
             setNotificationModelOpen(true);
@@ -245,10 +246,13 @@ const BasicUser = () => {
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/2048px-Instagram_logo_2022.svg.png" alt="" />
                         </div>
                         <div className="social-icon">
-                            <img src="https://www.svgrepo.com/show/416500/youtube-circle-logo.svg" alt="" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/960px-Facebook_logo_%28square%29.png" alt="" />
                         </div>
                         <div className="social-icon">
                             <img src="https://cdn2.downdetector.com/static/uploads/c/300/f52a5/image11.png" alt="" />
+                        </div>
+                        <div className="social-icon">
+                            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="" />
                         </div>
                         <div className="social-icon">
                             <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2020/10/91/5f9b61e42640e.png" alt="" />
@@ -258,7 +262,7 @@ const BasicUser = () => {
 
                 <RedorGreenFlag>
                     <div className="info">
-                        72% votes for <b>red flag 🚩</b> as a person
+                        61% votes for <b>green flag <FlagIcon /></b> as a person
                     </div>
 
                     <div className={upvoted === -1 ? "vote-btn voted" : "vote-btn"}
@@ -267,8 +271,8 @@ const BasicUser = () => {
                     </div>
 
                     <div className="box">
-                        <div className="left">💚</div>
-                        <div className="right">Red Flag 🚩</div>
+                        <div className="left">Green Flag <FlagIcon /></div>
+                        <div className="right">🚩</div>
                     </div>
 
                     <div className={upvoted === 1 ? "vote-btn voted" : "vote-btn"}
@@ -280,37 +284,25 @@ const BasicUser = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">Brand Promotions</div>
+                        <div className="group-name">Grab a Tea ☕️</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
-                        <div>Shop all the <b>products I swear by</b></div>
+                        <div>Story of my life, my 22 years</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        <div><b>@newme.asia</b> code : “SOMY”</div>
+                        <div>Music Taste <b>Spotify</b></div>
                         <div className="link-circle">
                             <CallMadeIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        <div>Premium analog watches! <b>@hotgadget.store</b> 🛒</div>
+                        <div>Movies Review - since <b>sept 2024</b></div>
                         <div className="link-circle">
-                            <CallMadeIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div>My makeup suggestions <b>@nykaa</b></div>
-                        <div className="link-circle">
-                            <CallMadeIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div>In love with there phone cases <b>@casecreation</b> 🤭🎀</div>
-                        <div className="link-circle">
-                            <CallMadeIcon />
+                            <ChevronRightIcon />
                         </div>
                     </div>
                 </div>
@@ -318,84 +310,27 @@ const BasicUser = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">My Content</div>
+                        <div className="group-name">...</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
-                        <div>Most loved reel ❤️</div>
+                        <div><b>Anonymous</b> Ask me anything - AMA</div>
                         <div className="link-circle">
-                            <CallMadeIcon />
+                            <ChevronRightIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        <div><b>New vlog</b> - I watched my first IPL match - RCB 🔥</div>
+                        <div><b>Anonymous</b>  - something you don't like about me</div>
                         <div className="link-circle">
-                            <CallMadeIcon />
+                            <ChevronRightIcon />
                         </div>
                     </div>
                     <a href="/influencer/form" className="link1">
-                        <div>Collab with me 🥹</div>
+                        <div>Which movie character I am most similar with</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
                     </a>
-                </div>
-
-                <div className="group">
-                    <div className="group-name-container">
-                        <div className="group-name-container-line"></div>
-                        <div className="group-name">Recent Promotions</div>
-                        <div className="group-name-container-line"></div>
-                    </div>
-
-                    <div className="shop-2">
-                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={influencerproduct1} alt="" /></div>
-                            <div className="item-name">
-                                T-shirt
-                            </div>
-                        </div>
-                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={influencerproduct2} alt="" /></div>
-                            <div className="item-name">
-                                Shine Lip Gloss
-                            </div>
-                        </div>
-                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={influencerproduct3} alt="" /></div>
-                            <div className="item-name">
-                                Watch
-                            </div>
-                        </div>
-                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={influencerproduct4} alt="" /></div>
-                            <div className="item-name">
-                                T-shirt
-                            </div>
-                        </div>
-                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={influencerproduct5} alt="" /></div>
-                            <div className="item-name">
-                                T-shirt
-                            </div>
-                        </div>
-                        <div className="link-2-shop" onClick={() => setModelOpen(true)}>
-                            <div className="border-bottom-light"></div>
-                            <div className="left"><img src={influencerproduct6} alt="" /></div>
-                            <div className="item-name">
-                                Phone Cover
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="view-all-btn">
-                        <a href="/influencer/shop" className="btn-3">View all promotions</a>
-                    </div>
                 </div>
 
                 <div className="share-my-page">
@@ -772,6 +707,12 @@ const RedorGreenFlag = styled.div`
         color: white;
         left: 50px;
         font-style: italic;
+
+        svg{
+            fill: green;
+            font-size: 1rem;
+            margin-bottom: -5px;
+        }
     }
 
     .vote-btn{
@@ -824,15 +765,20 @@ const RedorGreenFlag = styled.div`
 
             /* text-wrap: nowrap; */
             white-space: nowrap;
-            width: 28%;
+            width: 61%;
             border-right: 2px solid white;
             overflow: hidden;
             padding: 5px;
+
+            svg{
+                font-size: 1rem;
+                fill: lightgreen;
+            }
         }
 
         .right{
             height: 100%;
-            width: 72%;
+            width: 39%;
             display: flex;
             align-items: center;
             justify-content: center;

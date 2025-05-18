@@ -284,25 +284,51 @@ const BasicUser = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">Grab a Tea ☕️</div>
+                        <div className="group-name">💅 Unfiltered, Unbothered, Just Me</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
-                        <div>Story of my life, my 22 years</div>
+                        <div><b>Anonymous</b> ✨ Spill the tea – Ask Me Anything</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        <div>Music Taste <b>Spotify</b></div>
+                        <div><b>Anonymous</b> 🫣 What gives you the ick about me?</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+                    <div className="link1">
+                        <div><b>Anonymous</b> 🧃 <b>Public Confession Wall</b> – Drop your thoughts about me</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+                    <a href="/influencer/form" className="link1">
+                        <div>✨ Which movie character is basically me?</div>
+                        <div className="link-circle">
+                            <BarChartIcon />
+                        </div>
+                    </a>
+                </div>
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">🫖 Grab a Tea & Scroll</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+                    <div className="link1">
+                        <div>🧸 22 Years of Me – My Story So Far</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+                    <div className="link1">
+                        <div>🎧 Music Taste? Basically My Personality <b>Spotify</b></div>
                         <div className="link-circle">
                             <CallMadeIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div>Movies Review - since <b>sept 2024</b></div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
                         </div>
                     </div>
                 </div>
@@ -310,27 +336,51 @@ const BasicUser = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">...</div>
+                        <div className="group-name">📚 Books That Live In My Mind Rent-Free</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
-                        <div><b>Anonymous</b> Ask me anything - AMA</div>
+                        <div><b>The fault in our stars</b> - John Green</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
                     </div>
                     <div className="link1">
-                        <div><b>Anonymous</b>  - something you don't like about me</div>
+                        <div><b>It Ends With Us</b> – Colleen Hoover</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
                     </div>
-                    <a href="/influencer/form" className="link1">
-                        <div>Which movie character I am most similar with</div>
+                    <div className="link1">
+                        <div><b>One night at the call centre</b> – Chetan Bhagat</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
-                    </a>
+                    </div>
+                    <div className="link1">
+                        <div><b>Verity</b> – Colleen Hoover</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+                    <div className="link1">
+                        <div><b>When Love Came Calling</b> – Preeti Shenoy</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+                    <div className="link1">
+                        <div><b>Before We Say Goodbye</b> – Toshikazu Kawaguchi</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+                    <div className="link1">
+                        <div><b>The Last Boy To Fall In Love</b> – Durjoy Datta</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="share-my-page">

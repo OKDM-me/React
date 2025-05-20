@@ -14,6 +14,8 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import RoomIcon from '@material-ui/icons/Room';
 import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import BookmarkIcon from '@material-ui/icons/Bookmark';
+import EventAvailableIcon from '@material-ui/icons/EventAvailable';
+import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
@@ -260,7 +262,7 @@ const BasicUser2 = () => {
                     </div>
                 </div>
 
-                <RedorGreenFlag>
+                {/* <RedorGreenFlag>
                     <div className="info">
                         61% votes for <b>green flag <FlagIcon /></b> as a person
                     </div>
@@ -279,7 +281,7 @@ const BasicUser2 = () => {
                         onClick={() => handleVote(upvoted === 1 ? 0 : 1)}>
                         <ArrowDropUpIcon />
                     </div>
-                </RedorGreenFlag>
+                </RedorGreenFlag> */}
 
                 <div className="group">
                     <div className="group-name-container">
@@ -287,40 +289,87 @@ const BasicUser2 = () => {
                         <div className="group-name">Professional 💼</div>
                         <div className="group-name-container-line"></div>
                     </div>
+
                     <div className="link1">
-                        <div><b>Anonymous</b> ✨ Spill the tea – Ask Me Anything</div>
+                        <div>View My Resume</div>
                         <div className="link-circle">
-                            <ChevronRightIcon />
+                            <CallMadeIcon />
                         </div>
                     </div>
+
                     <div className="link1">
-                        <div><b>Anonymous</b> 🫣 What gives you the ick about me?</div>
+                        <div>Schedule a One-on-One Meeting</div>
                         <div className="link-circle">
-                            <ChevronRightIcon />
+                            <EventAvailableIcon />
                         </div>
                     </div>
-                    <div className="link1">
-                        <div><b>Anonymous</b> 🧃 <b>Public Confession Wall</b> – Drop your thoughts about me</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
+
                     <a href="/influencer/form" className="link1">
-                        <div>✨ Which movie character is basically me?</div>
+                        <div>Invite Me for an Interview</div>
                         <div className="link-circle">
-                            <BarChartIcon />
+                            <ChevronRightIcon />
                         </div>
                     </a>
+
+                    <div className="link1">
+                        <div>Request a Samsung Referral</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+
+                    <div className="link1">
+                        <div>Explore My Past Projects</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+
+                    <div className="link1">
+                        <div>Collaborate on an Project - Share your Idea</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">🫖 Grab a Tea & Scroll</div>
+                        <div className="group-name">Paid Servies</div>
+                        <div className="group-name-container-line"></div>
+                    </div>
+
+                    <div className="link1">
+                        <div className="paid-circle">
+                            <MonetizationOnIcon/>
+                        </div>
+                        <div>Top <b>200 Leetcode Questions</b> - One needs to Solve</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+
+                    <div className="link1">
+                        <div className="paid-circle">
+                            <MonetizationOnIcon/>
+                        </div>
+                        <div><b>Mock Interview</b> - 45 Mins/2 Questions - with feedback</div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="group">
+                    <div className="group-name-container">
+                        <div className="group-name-container-line"></div>
+                        <div className="group-name">Grab a Tea & Scroll 🫖</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
-                        <div>🧸 22 Years of Me – My Story So Far</div>
+                        <div>🧸 22 Years of Me – My Story So Far/Timeline</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
@@ -329,56 +378,6 @@ const BasicUser2 = () => {
                         <div>🎧 Music Taste? Basically My Personality <b>Spotify</b></div>
                         <div className="link-circle">
                             <CallMadeIcon />
-                        </div>
-                    </div>
-                </div>
-
-                <div className="group">
-                    <div className="group-name-container">
-                        <div className="group-name-container-line"></div>
-                        <div className="group-name">📚 Books That Live In My Mind Rent-Free</div>
-                        <div className="group-name-container-line"></div>
-                    </div>
-                    <div className="link1">
-                        <div><b>The fault in our stars</b> - John Green</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div><b>It Ends With Us</b> – Colleen Hoover</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div><b>One night at the call centre</b> – Chetan Bhagat</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div><b>Verity</b> – Colleen Hoover</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div><b>When Love Came Calling</b> – Preeti Shenoy</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div><b>Before We Say Goodbye</b> – Toshikazu Kawaguchi</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-                    <div className="link1">
-                        <div><b>The Last Boy To Fall In Love</b> – Durjoy Datta</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
                         </div>
                     </div>
                 </div>
@@ -567,6 +566,17 @@ const Container = styled.div`
             b{
                 display: inline;
                 margin-right: 5px;
+            }
+
+            .paid-circle{
+                position: absolute;
+
+                left: 15px;
+                
+                svg{
+                    font-size: 1.65rem;
+                    fill: yellow;
+                }
             }
 
             .link-circle{

@@ -329,13 +329,6 @@ const BasicUser2 = () => {
                     </a>
 
                     <div className="link1">
-                        <div>Request a Samsung Referral</div>
-                        <div className="link-circle">
-                            <ChevronRightIcon />
-                        </div>
-                    </div>
-
-                    <div className="link1">
                         <div>Explore My Past Projects</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
@@ -430,10 +423,9 @@ const Container = styled.div`
     display: flex;  
     flex-direction: column;
     align-items: center;
-background-color: white;
+    
     .main-content{
         max-width: 500px;
-        background-color: white;
     }
 
     .user-data{
@@ -899,7 +891,7 @@ const ModelConatiner = styled.div`
         width: 80%;
         /* height: 70%; */
         max-width: 400px;
-        margin-top: -50px;
+        /* margin-top: -50px; */
 
         background-color: white;
         

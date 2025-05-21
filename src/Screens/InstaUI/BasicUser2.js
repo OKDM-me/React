@@ -289,7 +289,7 @@ const BasicUser2 = () => {
                         Pinned Announcement
                     </div>
                     <b>Open to Work</b>
-                    Open to backend-heavy SDE 2 positions at product-based companies. 
+                    Open to backend-heavy SDE 2 positions at product-based companies.
                 </PinnedAnnouncement>
 
                 <div className="group">
@@ -300,9 +300,17 @@ const BasicUser2 = () => {
                     </div>
 
                     <div className="link1">
-                        <div>View My Resume</div>
+                        <div>View my Resume - <b>Software Developer • 2 YOE</b></div>
                         <div className="link-circle">
                             <CallMadeIcon />
+                        </div>
+                    </div>
+
+
+                    <div className="link1">
+                        <div>Want a Referral? Fill the Form with Your <b>Experience, Opening Link etc</b></div>
+                        <div className="link-circle">
+                            <ChevronRightIcon />
                         </div>
                     </div>
 
@@ -351,7 +359,7 @@ const BasicUser2 = () => {
 
                     <div className="link1">
                         <div className="paid-circle">
-                            <MonetizationOnIcon/>
+                            <MonetizationOnIcon />
                         </div>
                         <div>Top <b>200 Leetcode Questions</b> - One needs to Solve</div>
                         <div className="link-circle">
@@ -361,7 +369,7 @@ const BasicUser2 = () => {
 
                     <div className="link1">
                         <div className="paid-circle">
-                            <MonetizationOnIcon/>
+                            <MonetizationOnIcon />
                         </div>
                         <div><b>Mock Interview</b> - 45 Mins/2 Questions - with feedback</div>
                         <div className="link-circle">
@@ -422,9 +430,10 @@ const Container = styled.div`
     display: flex;  
     flex-direction: column;
     align-items: center;
-
+background-color: white;
     .main-content{
         max-width: 500px;
+        background-color: white;
     }
 
     .user-data{
@@ -537,6 +546,7 @@ const Container = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
+
 
             .group-name{
                 font-size: 0.85rem;

@@ -299,6 +299,7 @@ const BasicUser = () => {
                             <ChevronRightIcon />
                         </div>
                     </div>
+                    
                     <div className="link1">
                         <div><b>Anonymous</b> 🧃 <b>Public Confession Wall</b> – Drop your thoughts about me</div>
                         <div className="link-circle">

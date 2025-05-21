@@ -283,6 +283,15 @@ const BasicUser2 = () => {
                     </div>
                 </RedorGreenFlag> */}
 
+                <PinnedAnnouncement>
+                    <div className="label">
+                        <svg viewBox="0 0 24 24" height="16" width="16" preserveAspectRatio="xMidYMid meet" class="" fill="none"><title>pin-refreshed</title><path d="M16 5V12L17.7 13.7C17.8 13.8 17.875 13.9125 17.925 14.0375C17.975 14.1625 18 14.2917 18 14.425V15C18 15.2833 17.9042 15.5208 17.7125 15.7125C17.5208 15.9042 17.2833 16 17 16H13V21.85C13 22.1333 12.9042 22.3708 12.7125 22.5625C12.5208 22.7542 12.2833 22.85 12 22.85C11.7167 22.85 11.4792 22.7542 11.2875 22.5625C11.0958 22.3708 11 22.1333 11 21.85V16H7C6.71667 16 6.47917 15.9042 6.2875 15.7125C6.09583 15.5208 6 15.2833 6 15V14.425C6 14.2917 6.025 14.1625 6.075 14.0375C6.125 13.9125 6.2 13.8 6.3 13.7L8 12V5C7.71667 5 7.47917 4.90417 7.2875 4.7125C7.09583 4.52083 7 4.28333 7 4C7 3.71667 7.09583 3.47917 7.2875 3.2875C7.47917 3.09583 7.71667 3 8 3H16C16.2833 3 16.5208 3.09583 16.7125 3.2875C16.9042 3.47917 17 3.71667 17 4C17 4.28333 16.9042 4.52083 16.7125 4.7125C16.5208 4.90417 16.2833 5 16 5ZM8.85 14H15.15L14 12.85V5H10V12.85L8.85 14Z" fill="currentColor"></path></svg>
+                        Pinned Announcement
+                    </div>
+                    <b>Open to Work</b>
+                    Open to backend-heavy SDE 2 positions at product-based companies. 
+                </PinnedAnnouncement>
+
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
@@ -326,7 +335,7 @@ const BasicUser2 = () => {
                     </div>
 
                     <div className="link1">
-                        <div>Collaborate on an Project - Share your Idea</div>
+                        <div>Collaborate on a Project - Share your Idea</div>
                         <div className="link-circle">
                             <ChevronRightIcon />
                         </div>
@@ -365,7 +374,7 @@ const BasicUser2 = () => {
                 <div className="group">
                     <div className="group-name-container">
                         <div className="group-name-container-line"></div>
-                        <div className="group-name">Grab a Tea & Scroll 🫖</div>
+                        <div className="group-name">About me</div>
                         <div className="group-name-container-line"></div>
                     </div>
                     <div className="link1">
@@ -1183,3 +1192,43 @@ const NotificationModelConatiner = styled.div`
     }
   }
 `;
+
+
+const PinnedAnnouncement = styled.div`
+    margin-top: 100px;
+    margin-bottom: -20px;
+    padding: 15px;
+    background-color: #363636;
+    font-size: 0.85rem;
+    font-weight: 300;
+    border-radius: 10px;
+    line-height: 1.35rem;
+    border-left: 10px solid white;
+    /* border: 1px solid white; */
+    color: #e5e5e5;
+    
+    position: relative;
+    
+    b{
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .label{
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        font-size: 0.7rem;
+        font-weight: 300;
+        /* letter-spacing: 0.04rem; */
+
+        display: flex;
+        align-items: center;
+
+        svg{
+            margin-right: 5px;
+            transform: rotate(45deg);
+        }
+    }
+`
